@@ -1,0 +1,16 @@
+{
+  "name": "basic-site-template",
+  "version": "1.0.0",
+  "description": "This is a basic site template that will be used to expedite the process of completing other projects",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
