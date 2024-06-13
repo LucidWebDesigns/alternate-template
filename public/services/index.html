@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <script
+      defer
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
+  </head>
+  <body>
+    <header class="page-header">
+  <div class="container">
+    <div class="page-header__content">
+      <a href="/">
+
+    
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 114 26.6"
+          class="logo"
+          width="8rem"
+          fill="var(--logo-color, #000)"
+        >
+          <path
+            d="M32.4 8.1h2.9v11.7h-2.9V8.1zm4 7.3c0-2.9 1.8-4.6 4.5-4.6s4.5 1.7 4.5 4.6-1.7 4.7-4.5 4.7-4.5-1.7-4.5-4.7zm6.2 0c0-1.6-.6-2.5-1.6-2.5s-1.6.9-1.6 2.5.6 2.5 1.6 2.5 1.6-.8 1.6-2.5zm4 5h2.8c.3.6.9 1 1.6.9 1.1 0 1.7-.6 1.7-1.5v-1.6c-.5 1-1.6 1.7-2.7 1.6-2.1 0-3.5-1.6-3.5-4.4s1.3-4.5 3.6-4.5c1.2-.1 2.3.6 2.7 1.7h-.1V11h2.9v8.8c0 2.1-1.9 3.4-4.6 3.4-2.6 0-4.2-1.1-4.4-2.8zm6-5c0-1.4-.6-2.3-1.7-2.3s-1.7.9-1.7 2.3.6 2.2 1.7 2.2 1.7-.7 1.7-2.2zm4 0c0-2.9 1.8-4.6 4.5-4.6s4.5 1.7 4.5 4.6-1.7 4.7-4.5 4.7-4.4-1.7-4.5-4.7zm6.2 0c0-1.6-.6-2.5-1.6-2.5s-1.6.9-1.6 2.5.6 2.5 1.6 2.5 1.6-.8 1.6-2.5zm4-6.5c0-.8.6-1.5 1.4-1.5.8 0 1.5.6 1.5 1.4 0 .8-.6 1.5-1.4 1.5h-.1c-.7 0-1.4-.6-1.4-1.4zm0 2.1h2.9v8.9h-2.9V11zm13.5 4.4c0 2.9-1.3 4.6-3.5 4.6-1.2.1-2.2-.6-2.7-1.6H74v4.4h-2.9V11H74v1.6c.4-1.1 1.5-1.8 2.7-1.7 2.3 0 3.6 1.6 3.6 4.5zm-3 0c0-1.4-.7-2.3-1.7-2.3s-1.7.9-1.7 2.3.6 2.3 1.7 2.3 1.8-.8 1.7-2.3zm7.9-4.6c2.4 0 3.9 1.1 3.9 3h-2.6c0-.6-.5-1-1.3-1s-1.2.2-1.2.7c0 .5.3.6 1 .7l1.9.4c1.8.4 2.5 1.1 2.5 2.4 0 1.8-1.7 3-4.1 3s-4.1-1.2-4.2-3h2.8c.1.7.6 1 1.4 1s1.2-.3 1.2-.7c0-.5-.3-.6-1-.7l-1.7-.4c-1.7-.4-2.6-1.3-2.6-2.6.1-1.7 1.6-2.8 4-2.8zM99 19.9h-2.8v-1.7h-.1c-.3 1.1-1.4 1.9-2.6 1.8-1.7.1-3.1-1.3-3.2-3v-6h2.9v5.1c0 1 .5 1.6 1.4 1.6.8 0 1.5-.7 1.5-1.5V11H99v8.9zm1.4-8.9h2.8v1.7h.1c.3-1.1 1.4-1.9 2.5-1.9 1.2-.1 2.3.7 2.5 1.9h.1c.4-1.2 1.5-1.9 2.7-1.9 1.5-.1 2.9 1.1 2.9 2.7v6.3h-2.9v-5.3c0-.9-.4-1.4-1.2-1.4-.7 0-1.3.5-1.3 1.2v5.5h-2.8v-5.3c0-.9-.4-1.4-1.2-1.4-.7 0-1.3.6-1.3 1.3v5.4h-2.9V11zM26.7 8.9c0-4.9-4-8.9-8.9-8.9-2.5 0-4.9 1-6.6 2.9H0v23.7h23.7V15.5c1.9-1.7 3-4.1 3-6.6zm-4.6 0c0 2.4-1.9 4.3-4.3 4.3s-4.3-1.9-4.3-4.3 1.9-4.3 4.3-4.3 4.3 1.9 4.3 4.3zM19.2 22H4.6V7.4H9c-.1.5-.1 1-.1 1.4 0 4.9 4 8.9 8.9 8.9.5 0 .9 0 1.4-.1V22z"
+          />
+        </svg>
+      </div>
+        </a>
+      <nav>
+        <ul role="list" class="nav-list flex-group">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+          <li>
+            <a href="/services">Services</a>
+          </li>
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <main>
+      
+
+    <link rel="stylesheet" href="/assets/css/pricing.css">
+    <link rel="stylesheet" href="/assets/css/services.css">
+
+
+<div class="section container">
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="RPsbs-1445">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteers.jpg">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteers.jpg">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteers.jpg" alt="volunteers" width="650" height="600" aria-hidden="true">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">Giving Back</span>
+            <h2 class="cs-title">How To Donate Us</h2>
+            <p class="cs-text">
+                Our impact is about more than moving money to where it’s needed most it’s also about helping nonprofits access information and ideas that will help them listen, learn, and grow. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas laborum hic consequuntur porro repudiandae officiis, necessitatibus vero natus nihil suscipit.
+            </p>
+            <ul class="cs-card-group">
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer1.svg" decoding="async" alt="icon" width="32" height="32" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Become a Volunteer</h3>
+                        <p class="cs-li-text">
+                            It’s no secret that one person alone cannot overcome the greatest humanitarian crises. It truly takes all of us.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer2.svg" decoding="async" alt="icon" width="32" height="32" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Quick Fundraise</h3>
+                        <p class="cs-li-text">
+                            It’s no secret that one person alone cannot overcome the greatest humanitarian crises. It truly takes all of us.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer3.svg" decoding="async" alt="icon" width="32" height="32" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Start Donating</h3>
+                        <p class="cs-li-text">
+                            It’s no secret that one person alone cannot overcome the greatest humanitarian crises. It truly takes all of us.
+                        </p>
+                    </div>
+                </li>
+            </ul>         
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="RPsbsr-1445">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteers.jpg">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteers.jpg">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteers.jpg" alt="volunteers" width="650" height="600" aria-hidden="true">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">Giving Back</span>
+            <h2 class="cs-title">How To Donate Us</h2>
+            <p class="cs-text">
+                Our impact is about more than moving money to where it’s needed most it’s also about helping nonprofits access information and ideas that will help them listen, learn, and grow. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas laborum hic consequuntur porro repudiandae officiis, necessitatibus vero natus nihil suscipit.
+            </p>
+            <p class="cs-text">
+                Our impact is about more than moving money to where it’s needed most it’s also about helping nonprofits access information and ideas that will help them listen, learn, and grow. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas laborum hic consequuntur porro repudiandae officiis, necessitatibus vero natus nihil suscipit.
+            </p>    
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="RPsbs-1445">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteers.jpg">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteers.jpg">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteers.jpg" alt="volunteers" width="650" height="600" aria-hidden="true">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">Giving Back</span>
+            <h2 class="cs-title">How To Donate Us</h2>
+            <p class="cs-text">
+                Our impact is about more than moving money to where it’s needed most it’s also about helping nonprofits access information and ideas that will help them listen, learn, and grow. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas laborum hic consequuntur porro repudiandae officiis, necessitatibus vero natus nihil suscipit.
+            </p>
+            <ul class="cs-card-group">
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer1.svg" decoding="async" alt="icon" width="32" height="32" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Become a Volunteer</h3>
+                        <p class="cs-li-text">
+                            It’s no secret that one person alone cannot overcome the greatest humanitarian crises. It truly takes all of us.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer2.svg" decoding="async" alt="icon" width="32" height="32" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Quick Fundraise</h3>
+                        <p class="cs-li-text">
+                            It’s no secret that one person alone cannot overcome the greatest humanitarian crises. It truly takes all of us.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer3.svg" decoding="async" alt="icon" width="32" height="32" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Start Donating</h3>
+                        <p class="cs-li-text">
+                            It’s no secret that one person alone cannot overcome the greatest humanitarian crises. It truly takes all of us.
+                        </p>
+                    </div>
+                </li>
+            </ul>         
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+
+<section id="services-1267">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our services</span>
+            <h2 class="cs-title">We offer project management services</h2>
+            <p class="cs-text">We can help you design your project and develop a comprehensive plan to ensure that it meets your specific needs and requirements. Our team of architects and engineers will work closely with you to create a design that is both functional and aesthetically pleasing.</p>
+            <a href="" class="cs-button-solid" aria-label="learn more about us">Learn More</a>
+        </div>
+        <div class="cs-wrapper">
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <h3 class="cs-h3">
+                        <picture class="cs-picture">
+                            <img class="cs-icon" aria-hidden="true"
+                                    src="https://csimg.nyc3.digitaloceanspaces.com/Services/two-people.svg" alt="svg icon"
+                                    width="37" height="29" loading="lazy" decoding="async">
+                        </picture>
+                        Workers
+                    </h3>
+                    <span class="cs-number">500+</span>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida, ex in commodo euismod, justo nisi bibendum libero,
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <h3 class="cs-h3">
+                        <picture class="cs-picture">
+                            <img class="cs-icon" aria-hidden="true"
+                                    src="https://csimg.nyc3.digitaloceanspaces.com/Services/line-graph.svg" alt="svg icon"
+                                    width="37" height="29" loading="lazy" decoding="async">
+                        </picture>
+                        Experience
+                    </h3>
+                    <span class="cs-number">12 Years</span>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida, ex in commodo euismod, justo nisi bibendum libero,
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <h3 class="cs-h3">
+                        <picture class="cs-picture">
+                            <img class="cs-icon" aria-hidden="true"
+                                    src="https://csimg.nyc3.digitaloceanspaces.com/Services/briefcase2.svg" alt="svg icon"
+                                    width="37" height="29" loading="lazy" decoding="async">
+                        </picture>
+                        Current Projects
+                    </h3>
+                    <span class="cs-number">100+</span>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida, ex in commodo euismod, justo nisi bibendum libero,
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <h3 class="cs-h3">
+                        <picture class="cs-picture">
+                            <img class="cs-icon" aria-hidden="true"
+                                    src="https://csimg.nyc3.digitaloceanspaces.com/Services/three-bars.svg" alt="svg icon"
+                                    width="37" height="29" loading="lazy" decoding="async">
+                        </picture>
+                        Awards Winner
+                    </h3>
+                    <span class="cs-number">200+</span>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida, ex in commodo euismod, justo nisi bibendum libero,
+                    </p>
+                </li>
+            </ul>
+            <picture class="cs-background">
+                <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Services/orange-waves.png" alt="waves">
+            </picture>
+        </div>
+    </div>
+</section>
+                                
+                                
+<!-- ============================================ -->
+<!--                P R I C I N G                 -->
+<!-- ============================================ -->
+
+  <section id="pricing-1790">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex">
+        <span class="cs-topper">Pricing</span>
+        <h2 class="cs-title">Choose Pricing Plans</h2>
+      </div>
+      <a href="" class="cs-button-solid">Book Appointment</a>
+    </div>
+    <div class="cs-wrapper">
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
+            alt="checkmark"
+            width="24"
+            height="24"
+          />
+          Access to All CLUB4 Locations
+        </li>
+        <li class="cs-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
+            alt="checkmark"
+            width="24"
+            height="24"
+          />
+          Fitness Floor & Cardio
+        </li>
+        <li class="cs-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
+            alt="checkmark"
+            width="24"
+            height="24"
+          />
+          Studio Fitness & Les Mills Classes
+        </li>
+        <li class="cs-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
+            alt="checkmark"
+            width="24"
+            height="24"
+          />
+          Tanning/Red-Light Therapy
+        </li>
+        <li class="cs-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
+            alt="checkmark"
+            width="24"
+            height="24"
+          />
+          Guest Passes & Bottled Water
+        </li>
+        <li class="cs-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
+            alt="checkmark"
+            width="24"
+            height="24"
+          />
+          30-Minute Fitness Consultation
+        </li>
+        <li class="cs-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
+            alt="checkmark"
+            width="24"
+            height="24"
+          />
+          Techniques Class
+        </li>
+        <li class="cs-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
+            alt="checkmark"
+            width="24"
+            height="24"
+          />
+          Personal Training Options
+        </li>
+        <li class="cs-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
+            alt="checkmark"
+            width="24"
+            height="24"
+          />
+          Lockers
+        </li>
+        <li class="cs-li">
+          <img
+            class="cs-icon"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
+            alt="checkmark"
+            width="24"
+            height="24"
+          />
+          Showers
+        </li>
+      </ul>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <span class="cs-package">Free Pass</span>
+          <div class="cs-flex-wrapper">
+            <span class="cs-price">$49.99</span>
+            <span class="cs-frequency"> /Month </span>
+          </div>
+          <p class="cs-item-text">
+            This month to month option allows you to workout up to four times a
+            month. Reservation needed four timed.
+          </p>
+          <a href="" class="cs-button-solid cs-price-button"
+            >Book Appointment</a
+          >
+        </li>
+        <li class="cs-item cs-popular">
+          <span class="cs-package">Weekly Pass</span>
+          <div class="cs-flex-wrapper">
+            <span class="cs-price">$99.99</span>
+            <span class="cs-frequency"> /Month </span>
+          </div>
+          <p class="cs-item-text">
+            This month to month option allows you to workout up to four times a
+            month. Reservation needed four timed.
+          </p>
+          <a href="" class="cs-button-solid cs-price-button"
+            >Book Appointment</a
+          >
+        </li>
+        <li class="cs-item">
+          <span class="cs-package">Monthly Pass</span>
+          <div class="cs-flex-wrapper">
+            <span class="cs-price">$149.99</span>
+            <span class="cs-frequency"> /Month </span>
+          </div>
+          <p class="cs-item-text">
+            This month to month option allows you to workout up to four times a
+            month. Reservation needed four timed.
+          </p>
+          <a href="" class="cs-button-solid cs-price-button"
+            >Book Appointment</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- SVG Graphic -->
+  <img
+    class="cs-graphic cs-light"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-texture.svg"
+    alt="graphic"
+    height="1920"
+    width="483"
+    loading="lazy"
+    decoding="async"
+    aria-hidden="true"
+  />
+  <!--Dark mode graphic, download and save locally, then open the file in your code editor and change the fill color to match the background color of the section below it on dark mode-->
+  <img
+    class="cs-graphic cs-dark"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dark-spatter.svg"
+    alt="graphic"
+    height="1920"
+    width="483"
+    loading="lazy"
+    decoding="async"
+    aria-hidden="true"
+  />
+</section>
+</div>
+
+    </main>
+      <footer class="site-footer">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 114 26.6"
+      class="logo"
+      width="8rem"
+      fill="var(--logo-color, #000)"
+    >
+      <path
+        d="M32.4 8.1h2.9v11.7h-2.9V8.1zm4 7.3c0-2.9 1.8-4.6 4.5-4.6s4.5 1.7 4.5 4.6-1.7 4.7-4.5 4.7-4.5-1.7-4.5-4.7zm6.2 0c0-1.6-.6-2.5-1.6-2.5s-1.6.9-1.6 2.5.6 2.5 1.6 2.5 1.6-.8 1.6-2.5zm4 5h2.8c.3.6.9 1 1.6.9 1.1 0 1.7-.6 1.7-1.5v-1.6c-.5 1-1.6 1.7-2.7 1.6-2.1 0-3.5-1.6-3.5-4.4s1.3-4.5 3.6-4.5c1.2-.1 2.3.6 2.7 1.7h-.1V11h2.9v8.8c0 2.1-1.9 3.4-4.6 3.4-2.6 0-4.2-1.1-4.4-2.8zm6-5c0-1.4-.6-2.3-1.7-2.3s-1.7.9-1.7 2.3.6 2.2 1.7 2.2 1.7-.7 1.7-2.2zm4 0c0-2.9 1.8-4.6 4.5-4.6s4.5 1.7 4.5 4.6-1.7 4.7-4.5 4.7-4.4-1.7-4.5-4.7zm6.2 0c0-1.6-.6-2.5-1.6-2.5s-1.6.9-1.6 2.5.6 2.5 1.6 2.5 1.6-.8 1.6-2.5zm4-6.5c0-.8.6-1.5 1.4-1.5.8 0 1.5.6 1.5 1.4 0 .8-.6 1.5-1.4 1.5h-.1c-.7 0-1.4-.6-1.4-1.4zm0 2.1h2.9v8.9h-2.9V11zm13.5 4.4c0 2.9-1.3 4.6-3.5 4.6-1.2.1-2.2-.6-2.7-1.6H74v4.4h-2.9V11H74v1.6c.4-1.1 1.5-1.8 2.7-1.7 2.3 0 3.6 1.6 3.6 4.5zm-3 0c0-1.4-.7-2.3-1.7-2.3s-1.7.9-1.7 2.3.6 2.3 1.7 2.3 1.8-.8 1.7-2.3zm7.9-4.6c2.4 0 3.9 1.1 3.9 3h-2.6c0-.6-.5-1-1.3-1s-1.2.2-1.2.7c0 .5.3.6 1 .7l1.9.4c1.8.4 2.5 1.1 2.5 2.4 0 1.8-1.7 3-4.1 3s-4.1-1.2-4.2-3h2.8c.1.7.6 1 1.4 1s1.2-.3 1.2-.7c0-.5-.3-.6-1-.7l-1.7-.4c-1.7-.4-2.6-1.3-2.6-2.6.1-1.7 1.6-2.8 4-2.8zM99 19.9h-2.8v-1.7h-.1c-.3 1.1-1.4 1.9-2.6 1.8-1.7.1-3.1-1.3-3.2-3v-6h2.9v5.1c0 1 .5 1.6 1.4 1.6.8 0 1.5-.7 1.5-1.5V11H99v8.9zm1.4-8.9h2.8v1.7h.1c.3-1.1 1.4-1.9 2.5-1.9 1.2-.1 2.3.7 2.5 1.9h.1c.4-1.2 1.5-1.9 2.7-1.9 1.5-.1 2.9 1.1 2.9 2.7v6.3h-2.9v-5.3c0-.9-.4-1.4-1.2-1.4-.7 0-1.3.5-1.3 1.2v5.5h-2.8v-5.3c0-.9-.4-1.4-1.2-1.4-.7 0-1.3.6-1.3 1.3v5.4h-2.9V11zM26.7 8.9c0-4.9-4-8.9-8.9-8.9-2.5 0-4.9 1-6.6 2.9H0v23.7h23.7V15.5c1.9-1.7 3-4.1 3-6.6zm-4.6 0c0 2.4-1.9 4.3-4.3 4.3s-4.3-1.9-4.3-4.3 1.9-4.3 4.3-4.3 4.3 1.9 4.3 4.3zM19.2 22H4.6V7.4H9c-.1.5-.1 1-.1 1.4 0 4.9 4 8.9 8.9 8.9.5 0 .9 0 1.4-.1V22z"
+      />
+    </svg>
+    <p>© <script>document.write(new Date().getFullYear())</script> Company Name. All rights reserved.</p>
+  </footer>
+
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
