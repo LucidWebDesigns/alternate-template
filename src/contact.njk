@@ -3,6 +3,62 @@ title: Blog
 layout: "base.njk"
 ---
 
-<div class="section container">
-  <h1 class="section-title">Contact</h1>
-</div>
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/contact.css">
+{% endblock %}
+
+
+<section  id="contact-1750">
+  <div id="fixed-image"></div>
+    <div class="cs-container">
+        <div class="cs-form-group">
+            <div class="cs-content">
+                <span class="cs-topper">Get in Touch</span>
+                <h2 class="cs-title">Contact Us</h2>
+            </div>
+            <!--Form-->
+            <form class="cs-form" id="cs-form-1750" name="Contact Form" method="post">
+                <label class="cs-label">
+                    Name *
+                    <input class="cs-input" required type="text" id="name-1750" name="name" placeholder="John Doe">
+                </label>
+                <label class="cs-label cs-email">
+                    Email *
+                    <input class="cs-input" required type="email" id="email-1750" name="email" placeholder="name@company.com">
+                </label>
+                <label class="cs-label cs-phone">
+                    Phone *
+                    <input class="cs-input" required type="phone" id="phone-1750" name="phone" placeholder="+1 (206) 987-6543">
+                </label>
+                <label class="cs-label">
+                    Message *
+                    <textarea class="cs-input cs-textarea" required name="Message" id="message-1750" placeholder="Hello, I am interested..."></textarea>
+                </label>
+                <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
+            </form>
+        </div>
+        <!--Contact Info-->
+        <div class="cs-info-group">
+            <div class="cs-info">
+                <span class="cs-topper">Location</span>
+                <span class="cs-detail">234-244 Stockwell Rd, 4th Floor<br>Brixton, SW9 9SP</span>
+            </div>
+            <div class="cs-info">
+                <span class="cs-topper">Working Hours</span>
+                <span class="cs-detail">Monday - Saturday: 10:00 - 20:00</span>
+                <span class="cs-detail">Sunday: Closed</span>
+            </div>
+            <div class="cs-info">
+                <span class="cs-topper">Contact</span>
+                <span class="cs-detail">M: +99 40 70 929</span>
+                <span class="cs-detail">E: info@stitchgym.com</span>
+            </div>
+        </div>
+    </div>
+
+</section>
+                                

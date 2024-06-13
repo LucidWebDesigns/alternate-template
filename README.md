@@ -10,3 +10,5 @@ INSTALL ELEVENTY
 npm install @11ty/eleventy --save-dev
 
 Push to github and set up with netlify.
+
+in netlify set Publish Directory to public
