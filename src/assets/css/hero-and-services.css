@@ -77,12 +77,12 @@
   }
   #hero-1618 .cs-text {
     /* 16px - 20px */
-    font-size: clamp(1rem, 1.95vw, 1.25rem);
+    font-size: clamp(1rem, 1.85vw, 1.25rem);
     line-height: 1.5em;
     /* text-align: inherit; */
     width: 100%;
     /* 464px - 622px */
-    max-width: clamp(29rem, 60vw, 38.785rem);
+    max-width: clamp(29rem, 40vw, 38.785rem);
     margin: 0 0 2.5rem 0;
   }
   #hero-1618 .cs-button-solid {
@@ -116,14 +116,15 @@
     width: 100%;
   }
   #hero-1618 .cs-card-group {
-    margin: 0;
+    margin: 2em 0 5em 0;
     padding: 0;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    display: flex;
+    /* grid-template-columns: repeat(12, 1fr); */
     /* 16px - 20px */
     gap: clamp(2rem, 4.6vw, 2.5rem);
     text-align: center;
+    flex-direction: column;
   }
   #hero-1618 .cs-item {
     width: 100%;
@@ -217,6 +218,7 @@
     /* text-align: left; */
     margin-left: 0;
     align-items: flex-start;
+    max-width: clamp(20rem, 58vw, 48.75rem);
   }
   #hero-1618 .cs-item {
     grid-column: span 4;
@@ -232,6 +234,12 @@
       rgba(17, 25, 38, 0) 62.53%
     );
     opacity: 1;
+  }
+}
+@media only screen and (min-width: 65rem) {
+  #hero-1618 .cs-card-group {
+    flex-direction: row;
+    margin: 2em 0 4em 0;
   }
 }
 /* Large Desktop Parallax Effect - 100px */
