@@ -142,7 +142,7 @@ layout: "base.njk"
       <p class="text-center">
         Here are some sample articles that capture the essence of what our site offers. Dive in to get a clear understanding of our focus and expertise.
       </p>
-      <ul role="list" class="articles__list flow">
+      <ul role="list" class="articles__list ">
         {%- for post in collections.featured | reverse -%} {% include
         "article-snippet.njk" %} {%- endfor %}
       </ul>

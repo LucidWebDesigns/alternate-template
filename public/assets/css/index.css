@@ -17,8 +17,8 @@
 
 .articles__list {
   display: flex;
-  flex-direction: column;
   --flow-spacer: 3rem;
+  gap: 2em;
   margin: 1rem;
   width: 100%;
   align-items: center;
@@ -49,7 +49,7 @@
   box-shadow: var(--item-box-shadow);
   padding: 3em 2em;
   border-radius: 5px;
-  max-width: clamp(10rem, 50vw, 50rem);
+  max-width: clamp(10rem, 50vw, 30rem);
 }
 
 .snippet__body {
@@ -63,7 +63,7 @@
 
 .snippet__image {
   width: 100%;
-  max-height: clamp(15rem, 30vh, 30rem);
+  max-height: clamp(10rem, 10vh, 20rem);
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
@@ -92,6 +92,18 @@
 
 .snippet .cs-button-solid {
   margin-left: 0;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 868px) {
+  .articles__list {
+    flex-direction: column;
+  }
+}
+@media (min-width: 869px) {
+  .articles__list {
+    flex-direction: row;
+  }
 }
 
 @media (min-width: 45em) {
