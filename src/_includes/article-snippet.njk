@@ -12,8 +12,10 @@
       by <span>{{ post.data.author }}</span> on
       <span>{{ post.date | postDate }}</span>
     </p> -->
-    <p class="snippet__body">{{ post.data.description }}</p>
-    <a href="{{ post.url }}" class="btn btn--primary">Continue Reading</a>
+    <p class="snippet__body">
+      {{ post.data.description }}
+    </p>
+    <a href="{{ post.url }}" class="cs-button-solid">READ MORE</a>
   </article>
 </li>
 <!-- <li>
