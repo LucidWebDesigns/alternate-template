@@ -95,12 +95,12 @@
   font-size: 0.8rem;
 }
 
-@media (max-width: 868px) {
+@media (max-width: 1068px) {
   .articles__list {
     flex-direction: column;
   }
 }
-@media (min-width: 869px) {
+@media (min-width: 1069px) {
   .articles__list {
     flex-direction: row;
   }
