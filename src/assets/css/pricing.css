@@ -1,75 +1,21 @@
-:root {
-  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-  --primary: #ff6a3e;
-  --primaryLight: #ffba43;
-  --secondary: #ffba43;
-  --secondaryLight: #ffba43;
-  --headerColor: #1a1a1a;
-  --bodyTextColor: #4e4b66;
-  --bodyTextColorWhite: #fafbfc;
-  /* 13px - 16px */
-  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-  /* 31px - 49px */
-  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
-  --bodyFontSize: 1rem;
-  /* 60px - 100px top and bottom */
-  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-*,
-*:before,
-*:after {
-  /* prevents padding from affecting height and width */
-  box-sizing: border-box;
-}
-.cs-topper {
-  font-size: var(--topperFontSize);
-  line-height: 1.2em;
-  text-transform: uppercase;
-  text-align: inherit;
-  letter-spacing: 0.1em;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 0.25rem;
-  display: block;
-}
-
-.cs-title {
-  font-size: var(--headerFontSize);
-  font-weight: 900;
-  line-height: 1.2em;
-  text-align: inherit;
-  max-width: 43.75rem;
-  margin: 0 0 1rem 0;
-  color: var(--headerColor);
-  position: relative;
-}
-
-.cs-text {
-  font-size: var(--bodyFontSize);
-  line-height: 1.5em;
-  text-align: inherit;
-  width: 100%;
-  max-width: 40.625rem;
-  margin: 0;
-  color: var(--bodyTextColor);
-}
-
 /*-- -------------------------- -->
 <---          Pricing           -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
+  .cs-price-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .cs-item {
+    margin: 0;
+  }
   #pricing-1790 {
-    padding: var(--sectionPadding);
+    /* padding: var(--sectionPadding); */
     padding-bottom: 10vw;
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -106,6 +52,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
   #pricing-1790 .cs-ul {
     width: 100%;
@@ -135,6 +82,7 @@ body {
     display: block;
   }
   #pricing-1790 .cs-card-group {
+    gap: 2em;
     width: 100%;
     max-width: 57rem;
     margin: 3rem 0 0 0;
@@ -159,21 +107,36 @@ body {
     justify-content: flex-start;
     align-items: center;
     position: relative;
+    border: 2px solid rgba(222, 242, 255, 0.75);
+    border-radius: 5px;
   }
   #pricing-1790 .cs-item.cs-popular {
-    background-color: #1a1a1a;
+    background-color: #fff;
     /* 48px - 64px top & bottom */
     /* 16px - 32px left & right */
     padding: clamp(3rem, 6vw, 4rem) clamp(1rem, 1.5vw, 2rem);
+    /* box-shadow: 10px 5px 5px rgba(100, 100 255, 1); */
+    box-shadow: -1px -5px 15px rgba(66, 183, 255, 0.35),
+      1px -5px 15px rgba(66, 183, 255, 0.35);
+
+    margin: 0 25px;
+    z-index: 1;
+  }
+  .cs-price,
+  .cs-frequency {
+    color: var(--primary);
+    font-size: 5em;
   }
   #pricing-1790 .cs-item.cs-popular .cs-package,
   #pricing-1790 .cs-item.cs-popular .cs-frequency,
   #pricing-1790 .cs-item.cs-popular .cs-item-text {
-    color: var(--bodyTextColorWhite);
     opacity: 0.9;
   }
-  #pricing-1790 .cs-item.cs-popular .cs-price {
-    color: var(--bodyTextColorWhite);
+  #pricing-1790 .cs-item .cs-price {
+    color: var(--primary);
+  }
+  #pricing-1790 .cs-item .cs-frequency {
+    color: var(--primary);
   }
   #pricing-1790 .cs-item.cs-popular .cs-button-solid {
     transition: color 0.3s;
@@ -186,8 +149,8 @@ body {
   }
   #pricing-1790 .cs-package {
     /* 13px - 16px */
-    font-size: clamp(0.8125rem, 1.4vw, 1rem);
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 400;
     line-height: 1.2em;
     text-align: inherit;
     text-transform: uppercase;
@@ -224,8 +187,9 @@ body {
     display: block;
   }
   #pricing-1790 .cs-price {
-    font-size: var(--headerFontSize);
-    font-weight: 900;
+    /* font-size: var(--headerFontSize); */
+    font-size: 3em;
+    font-weight: 400;
     line-height: 1.2em;
     text-align: inherit;
     margin: 0;
@@ -245,6 +209,13 @@ body {
     text-align: inherit;
     margin: 0 0 auto;
     color: var(--bodyTextColor);
+  }
+  .cs-item-text-popular {
+    font-size: 1.25;
+    color: var(--bodyTextColor);
+  }
+  .cs-item-header {
+    color: black;
   }
   #pricing-1790 .cs-button-solid {
     font-size: 1rem;
@@ -311,6 +282,7 @@ body {
     align-items: stretch;
   }
   #pricing-1790 .cs-card-group {
+    gap: 0;
     flex-direction: row;
     align-items: stretch;
   }

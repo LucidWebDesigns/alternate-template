@@ -1,0 +1,385 @@
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #RPsbs-248 .cs-title {
+    font-size: clamp(1.4rem, 3.65vw, 2.2rem);
+  }
+  #RPsbs-248,
+  #RPsbsr-248 {
+    /* padding: 0 1em; */
+    position: relative;
+    z-index: 1;
+  }
+  #RPsbs-248 .cs-container,
+  #RPsbsr-248 .cs-container {
+    width: 100%;
+    /* changes to 1280px on tablet */
+    max-width: 34.375rem;
+    /* padding: var(--sectionPadding); */
+    padding-left: 0;
+    padding-right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 108px */
+    gap: clamp(3rem, 8vw, 6.75rem);
+    justify-content: space-between;
+    position: relative;
+  }
+  #RPsbs-248 .cs-content,
+  #RPsbsr-248 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    /* changes at tablet */
+    max-width: 27.125rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+
+  #RPsbs-248 .cs-title,
+  #RPsbsr-248 .cs-title {
+    max-width: 25ch;
+  }
+  #RPsbs-248 .cs-text,
+  #RPsbsr-248 .cs-text {
+    margin-bottom: 1rem;
+    opacity: 0.8;
+  }
+  #RPsbs-248 .cs-text:last-of-type,
+  #RPsbsr-248 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  .cs-button-solid-container {
+    display: flex;
+    justify-content: center;
+  }
+  .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  .cs-button-solid:before,
+  .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  .cs-button-solid:hover:before,
+  .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #RPsbs-248 .cs-picture,
+  #RPsbsr-248 .cs-picture {
+    width: 100%;
+    max-width: 27.125rem;
+    margin: 0;
+    position: relative;
+    display: block;
+    /* width divided by height */
+    aspect-ratio: 1;
+    /* prevents border from adding to height and width */
+    box-sizing: border-box;
+  }
+  #RPsbs-248 .cs-picture img,
+  #RPsbsr-248 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #RPsbs-248,
+  #RPsbsr-248 {
+    /* padding: 0 8em; */
+    position: relative;
+    z-index: 1;
+  }
+  #RPsbs-248 .cs-container,
+  #RPsbsr-248 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #RPsbs-248 .cs-lines,
+  #RPsbsr-248 .cs-lines {
+    height: 100%;
+    width: 35%;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  #RPsbs-248 .cs-lines:before,
+  #RPsbsr-248 .cs-lines:before {
+    /* Right Line */
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: -moz-linear-gradient(
+      top,
+      rgba(250, 251, 252, 0.5) 0%,
+      rgba(250, 251, 252, 0) 100%
+    );
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      top,
+      rgba(250, 251, 252, 0.5) 0%,
+      rgba(250, 251, 252, 0) 100%
+    );
+    /* Chrome10-25,Safari5.1-6 */
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    /* flips vertically */
+    transform: scaleY(-1);
+  }
+  #RPsbs-248 .cs-lines:after,
+  #RPsbsr-248 .cs-lines:after {
+    /* Right Line */
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: -moz-linear-gradient(
+      top,
+      rgba(250, 251, 252, 0.5) 0%,
+      rgba(250, 251, 252, 0) 100%
+    );
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      top,
+      rgba(250, 251, 252, 0.5) 0%,
+      rgba(250, 251, 252, 0) 100%
+    );
+    /* Chrome10-25,Safari5.1-6 */
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    /* flips vertically */
+    transform: scaleY(-1);
+  }
+  #RPsbs-248 .cs-picture,
+  #RPsbsr-248 .cs-picture {
+    /* 344px - 434px */
+    width: clamp(21.5rem, 37.5vw, 27.125rem);
+    flex: none;
+  }
+  #RPsbs-248 .cs-content,
+  #RPsbsr-248 .cs-content {
+    max-width: 38.875rem;
+    margin: 0;
+    width: 60%;
+  }
+}
+
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #RPsbsr-248 {
+    /* padding: 0 1rem; */
+  }
+  #RPsbsr-248 .cs-container {
+    /* 60px - 100px top and bottom */
+    padding: clamp(3.75rem, 7.82vw, 6.25rem) 0;
+  }
+  #RPsbsr-248 .cs-container:before {
+    /* Left Line */
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(
+      top,
+      rgba(250, 251, 252, 0.5) 0%,
+      rgba(250, 251, 252, 0) 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      rgba(250, 251, 252, 0.5) 0%,
+      rgba(250, 251, 252, 0) 100%
+    );
+    /* Chrome10-25,Safari5.1-6 */
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+  }
+  #RPsbsr-248 .cs-container:after {
+    /* Right Line */
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: -moz-linear-gradient(
+      top,
+      rgba(250, 251, 252, 0.5) 0%,
+      rgba(250, 251, 252, 0) 100%
+    );
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      top,
+      rgba(250, 251, 252, 0.5) 0%,
+      rgba(250, 251, 252, 0) 100%
+    );
+    /* Chrome10-25,Safari5.1-6 */
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    /* flips vertically */
+    transform: scaleY(-1);
+  }
+  #RPsbsr-248 .cs-lines {
+    display: none;
+  }
+  #RPsbsr-248 .cs-background {
+    /* Background Image */
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+  #RPsbsr-248 .cs-background:before {
+    /* Black Color Overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.6;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* prevents the cursor from interacting with it */
+    pointer-events: none;
+  }
+  #RPsbsr-248 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes image act like a background-image */
+    object-fit: cover;
+  }
+  #RPsbsr-248 .cs-topper {
+    color: var(--primaryLight);
+  }
+  #RPsbsr-248 .cs-title {
+    color: var(--bodyTextColorWhite);
+  }
+  #RPsbsr-248 .cs-text {
+    color: var(--bodyTextColorWhite);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #RPsbsr-248 .cs-lines {
+    height: 100%;
+    width: 35%;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  #RPsbsr-248 .cs-lines:before {
+    /* Right Line */
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: -moz-linear-gradient(
+      top,
+      rgba(250, 251, 252, 0.5) 0%,
+      rgba(250, 251, 252, 0) 100%
+    );
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      top,
+      rgba(250, 251, 252, 0.5) 0%,
+      rgba(250, 251, 252, 0) 100%
+    );
+    /* Chrome10-25,Safari5.1-6 */
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    /* flips vertically */
+    transform: scaleY(-1);
+  }
+  #RPsbsr-248 .cs-lines:after {
+    /* Right Line */
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: -moz-linear-gradient(
+      top,
+      rgba(250, 251, 252, 0.5) 0%,
+      rgba(250, 251, 252, 0) 100%
+    );
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      top,
+      rgba(250, 251, 252, 0.5) 0%,
+      rgba(250, 251, 252, 0) 100%
+    );
+    /* Chrome10-25,Safari5.1-6 */
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    /* flips vertically */
+    transform: scaleY(-1);
+  }
+  #RPsbsr-248 .cs-picture {
+    margin: 0;
+    order: 2;
+  }
+}

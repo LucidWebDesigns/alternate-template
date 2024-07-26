@@ -4,15 +4,20 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
+  .cs-wrapper {
+    display: flex;
+    justify-content: center;
+  }
   #hero-1618 {
-    padding: var(--sectionPadding);
+    /* padding: var(--sectionPadding); */
     /* 200px - 300px - leaving extra space for the navigation */
-    padding-top: clamp(12.5rem, 31.95vw, 18.75rem);
+    /* padding-top: clamp(12.5rem, 31.95vw, 18.75rem); */
     position: relative;
     z-index: 1;
+    text-align: center;
   }
   #hero-1618 .cs-container {
-    width: 100%;
+    /* width: 80%; */
     max-width: 80rem;
     margin: auto;
     display: flex;
@@ -24,7 +29,7 @@
   }
   #hero-1618 .cs-content {
     /* set text align to left if content needs to be left aligned */
-    text-align: left;
+    /* text-align: left; */
     width: 100%;
     max-width: 48.75rem;
     display: flex;
@@ -38,7 +43,7 @@
     line-height: 1.2em;
     font-weight: 700;
     letter-spacing: 0.1em;
-    text-align: center;
+    /* text-align: center; */
     text-transform: uppercase;
     margin-bottom: 0.25rem;
     color: var(--primary);
@@ -53,27 +58,32 @@
     width: 3rem;
     height: auto;
   }
-  #hero-1618 .cs-title {
-    /* 39px - 61px */
-    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+  .cs-title {
+    /* font-size: clamp(2rem, 5.4vw, 3rem); */
     font-weight: 700;
     line-height: 1.2em;
-    text-align: inherit;
+  }
+  #hero-1618 .cs-title {
+    font-size: clamp(1.4rem, 3.65vw, 2.2rem);
+  }
+  #hero-1618 .cs-title {
+    /* 39px - 61px */
+    font-weight: 700;
+    line-height: 1.2em;
+    /* text-align: inherit; */
     max-width: 100%;
     margin: 0 0 2.5rem 0;
-    color: #fff;
     position: relative;
   }
   #hero-1618 .cs-text {
     /* 16px - 20px */
     font-size: clamp(1rem, 1.95vw, 1.25rem);
     line-height: 1.5em;
-    text-align: inherit;
+    /* text-align: inherit; */
     width: 100%;
     /* 464px - 622px */
     max-width: clamp(29rem, 60vw, 38.785rem);
     margin: 0 0 2.5rem 0;
-    color: #fff;
   }
   #hero-1618 .cs-button-solid {
     font-size: 1rem;
@@ -90,7 +100,7 @@
     z-index: 1;
   }
   #hero-1618 .cs-button-solid:before {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     height: 100%;
@@ -100,7 +110,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    transition: width .3s;
+    transition: width 0.3s;
   }
   #hero-1618 .cs-button-solid:hover:before {
     width: 100%;
@@ -112,41 +122,44 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     /* 16px - 20px */
-    gap: clamp(1rem, 2.3vw, 1.25rem);
+    gap: clamp(2rem, 4.6vw, 2.5rem);
+    text-align: center;
   }
   #hero-1618 .cs-item {
     width: 100%;
-    text-align: left;
+    /* text-align: left; */
     list-style: none;
     margin: 0;
     /* 24px - 32px */
-    padding: clamp(1.5rem, 3vw, 2rem);
-    background-color: #fff;
-    box-shadow: 0px 12px 80px 0px rgba(26, 26, 26, 0.08);
+    /* padding: clamp(1.5rem, 3vw, 2rem); */
+    /* background-color: #fff; */
+    /* box-shadow: 0px 12px 80px 0px rgba(26, 26, 26, 0.08); */
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
     grid-column: span 12;
     grid-row: span 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     position: relative;
     z-index: 1;
+    align-self: flex-start;
   }
   #hero-1618 .cs-icon {
-    width: 3rem;
+    width: 4.5rem;
     height: auto;
     margin: 0 0 1.5rem 0;
+    color: #fff;
   }
   #hero-1618 .cs-h3 {
     /* 20px - 25px */
     font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
     line-height: 1.2em;
     font-weight: bold;
-    text-align: inherit;
+    /* text-align: inherit; */
     margin: 0 0 1rem 0;
-    color: var(--headerColor);
+    color: black;
   }
   #hero-1618 .cs-item-text {
     /* 14px - 16px */
@@ -155,7 +168,6 @@
     max-width: 28.125rem;
     margin: 0;
     padding: 0;
-    color: var(--bodyTextColor);
   }
   #hero-1618 .cs-background {
     width: 100%;
@@ -168,11 +180,11 @@
   }
   #hero-1618 .cs-background:before {
     /* Overlay */
-    content: '';
+    content: "";
     width: 100%;
     height: 100%;
     background: #111926;
-    opacity: .8;
+    opacity: 0.8;
     position: absolute;
     display: block;
     top: 0;
@@ -199,9 +211,10 @@
   }
   #hero-1618 .cs-container {
     align-items: flex-start;
+    gap: clamp(2rem, 7vw, 6.25rem);
   }
   #hero-1618 .cs-content {
-    text-align: left;
+    /* text-align: left; */
     margin-left: 0;
     align-items: flex-start;
   }
@@ -212,7 +225,12 @@
     height: 87%;
   }
   #hero-1618 .cs-background:before {
-    background: linear-gradient(90deg, #111926 21.41%, rgba(17, 25, 38, 0.72) 34.98%, rgba(17, 25, 38, 0) 62.53%);
+    background: linear-gradient(
+      90deg,
+      #111926 21.41%,
+      rgba(17, 25, 38, 0.72) 34.98%,
+      rgba(17, 25, 38, 0) 62.53%
+    );
     opacity: 1;
   }
 }
@@ -230,4 +248,3 @@
     display: none;
   }
 }
-                                

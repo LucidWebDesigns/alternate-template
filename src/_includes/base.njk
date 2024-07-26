@@ -4,11 +4,115 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/core.css" />
     <script
       defer
       src="https://identity.netlify.com/v1/netlify-identity-widget.js"
     ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navItems = document.querySelectorAll(".nav-item");
+
+        // Function to set the active item based on the current URL
+        function setActiveNavItem() {
+          const currentPath = window.location.pathname;
+
+          navItems.forEach((item) => {
+            const link = item.querySelector("a");
+            const linkPath = link.getAttribute("href");
+
+            if (
+              linkPath === currentPath ||
+              (linkPath === "/" && currentPath === "/")
+            ) {
+              item.classList.add("active");
+            } else {
+              item.classList.remove("active");
+            }
+          });
+        }
+
+        // Set the active item on initial load
+        setActiveNavItem();
+
+        // Set the active item just before the page unloads
+        window.addEventListener("beforeunload", function () {
+          navItems.forEach((item) => {
+            const link = item.querySelector("a");
+            const linkPath = link.getAttribute("href");
+
+            if (
+              linkPath === window.location.pathname ||
+              (linkPath === "/" && window.location.pathname === "/")
+            ) {
+              item.classList.add("active");
+            } else {
+              item.classList.remove("active");
+            }
+          });
+        });
+
+        // Set the active item on click without causing a blink
+        navItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            navItems.forEach((navItem) => navItem.classList.remove("active"));
+            this.classList.add("active");
+          });
+        });
+      });
+    </script>
+    <style>
+      .bg-curve-white {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        z-index: -1;
+      }
+
+      .bg-curve-white svg {
+        position: relative;
+        display: block;
+        width: calc(300% + 1.3px);
+        height: 600px;
+        transform: rotateY(180deg);
+        z-index: -1;
+      }
+
+      .bg-curve-white-bottom {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+      }
+
+      .bg-curve-white-bottom svg {
+        position: relative;
+        display: block;
+        width: calc(245% + 1.3px);
+        height: 600px;
+      }
+
+      .bg-curve-white .shape-fill,
+      .bg-curve-white-bottom .shape-fill {
+        fill: #ffffff;
+        z-index: -1;
+      }
+
+      .bg-curve-gradient {
+        fill: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(1, 60, 132, 1) 0%,
+          rgba(0, 149, 255, 1) 100%
+        );
+        z-index: -1;
+      }
+    </style>
   </head>
   <body>
     {% include "header.njk" %}

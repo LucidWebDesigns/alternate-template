@@ -4,48 +4,155 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog</title>
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/core.css" />
     <script
       defer
       src="https://identity.netlify.com/v1/netlify-identity-widget.js"
     ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navItems = document.querySelectorAll(".nav-item");
+
+        // Function to set the active item based on the current URL
+        function setActiveNavItem() {
+          const currentPath = window.location.pathname;
+
+          navItems.forEach((item) => {
+            const link = item.querySelector("a");
+            const linkPath = link.getAttribute("href");
+
+            if (
+              linkPath === currentPath ||
+              (linkPath === "/" && currentPath === "/")
+            ) {
+              item.classList.add("active");
+            } else {
+              item.classList.remove("active");
+            }
+          });
+        }
+
+        // Set the active item on initial load
+        setActiveNavItem();
+
+        // Set the active item just before the page unloads
+        window.addEventListener("beforeunload", function () {
+          navItems.forEach((item) => {
+            const link = item.querySelector("a");
+            const linkPath = link.getAttribute("href");
+
+            if (
+              linkPath === window.location.pathname ||
+              (linkPath === "/" && window.location.pathname === "/")
+            ) {
+              item.classList.add("active");
+            } else {
+              item.classList.remove("active");
+            }
+          });
+        });
+
+        // Set the active item on click without causing a blink
+        navItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            navItems.forEach((navItem) => navItem.classList.remove("active"));
+            this.classList.add("active");
+          });
+        });
+      });
+    </script>
+    <style>
+      .bg-curve-white {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        z-index: -1;
+      }
+
+      .bg-curve-white svg {
+        position: relative;
+        display: block;
+        width: calc(300% + 1.3px);
+        height: 600px;
+        transform: rotateY(180deg);
+        z-index: -1;
+      }
+
+      .bg-curve-white-bottom {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+      }
+
+      .bg-curve-white-bottom svg {
+        position: relative;
+        display: block;
+        width: calc(245% + 1.3px);
+        height: 600px;
+      }
+
+      .bg-curve-white .shape-fill,
+      .bg-curve-white-bottom .shape-fill {
+        fill: #ffffff;
+        z-index: -1;
+      }
+
+      .bg-curve-gradient {
+        fill: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(1, 60, 132, 1) 0%,
+          rgba(0, 149, 255, 1) 100%
+        );
+        z-index: -1;
+      }
+    </style>
   </head>
   <body>
     <header class="page-header">
   <div class="container">
     <div class="page-header__content">
       <a href="/">
-
-    
-      <div>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 114 26.6"
-          class="logo"
-          width="8rem"
-          fill="var(--logo-color, #000)"
-        >
-          <path
-            d="M32.4 8.1h2.9v11.7h-2.9V8.1zm4 7.3c0-2.9 1.8-4.6 4.5-4.6s4.5 1.7 4.5 4.6-1.7 4.7-4.5 4.7-4.5-1.7-4.5-4.7zm6.2 0c0-1.6-.6-2.5-1.6-2.5s-1.6.9-1.6 2.5.6 2.5 1.6 2.5 1.6-.8 1.6-2.5zm4 5h2.8c.3.6.9 1 1.6.9 1.1 0 1.7-.6 1.7-1.5v-1.6c-.5 1-1.6 1.7-2.7 1.6-2.1 0-3.5-1.6-3.5-4.4s1.3-4.5 3.6-4.5c1.2-.1 2.3.6 2.7 1.7h-.1V11h2.9v8.8c0 2.1-1.9 3.4-4.6 3.4-2.6 0-4.2-1.1-4.4-2.8zm6-5c0-1.4-.6-2.3-1.7-2.3s-1.7.9-1.7 2.3.6 2.2 1.7 2.2 1.7-.7 1.7-2.2zm4 0c0-2.9 1.8-4.6 4.5-4.6s4.5 1.7 4.5 4.6-1.7 4.7-4.5 4.7-4.4-1.7-4.5-4.7zm6.2 0c0-1.6-.6-2.5-1.6-2.5s-1.6.9-1.6 2.5.6 2.5 1.6 2.5 1.6-.8 1.6-2.5zm4-6.5c0-.8.6-1.5 1.4-1.5.8 0 1.5.6 1.5 1.4 0 .8-.6 1.5-1.4 1.5h-.1c-.7 0-1.4-.6-1.4-1.4zm0 2.1h2.9v8.9h-2.9V11zm13.5 4.4c0 2.9-1.3 4.6-3.5 4.6-1.2.1-2.2-.6-2.7-1.6H74v4.4h-2.9V11H74v1.6c.4-1.1 1.5-1.8 2.7-1.7 2.3 0 3.6 1.6 3.6 4.5zm-3 0c0-1.4-.7-2.3-1.7-2.3s-1.7.9-1.7 2.3.6 2.3 1.7 2.3 1.8-.8 1.7-2.3zm7.9-4.6c2.4 0 3.9 1.1 3.9 3h-2.6c0-.6-.5-1-1.3-1s-1.2.2-1.2.7c0 .5.3.6 1 .7l1.9.4c1.8.4 2.5 1.1 2.5 2.4 0 1.8-1.7 3-4.1 3s-4.1-1.2-4.2-3h2.8c.1.7.6 1 1.4 1s1.2-.3 1.2-.7c0-.5-.3-.6-1-.7l-1.7-.4c-1.7-.4-2.6-1.3-2.6-2.6.1-1.7 1.6-2.8 4-2.8zM99 19.9h-2.8v-1.7h-.1c-.3 1.1-1.4 1.9-2.6 1.8-1.7.1-3.1-1.3-3.2-3v-6h2.9v5.1c0 1 .5 1.6 1.4 1.6.8 0 1.5-.7 1.5-1.5V11H99v8.9zm1.4-8.9h2.8v1.7h.1c.3-1.1 1.4-1.9 2.5-1.9 1.2-.1 2.3.7 2.5 1.9h.1c.4-1.2 1.5-1.9 2.7-1.9 1.5-.1 2.9 1.1 2.9 2.7v6.3h-2.9v-5.3c0-.9-.4-1.4-1.2-1.4-.7 0-1.3.5-1.3 1.2v5.5h-2.8v-5.3c0-.9-.4-1.4-1.2-1.4-.7 0-1.3.6-1.3 1.3v5.4h-2.9V11zM26.7 8.9c0-4.9-4-8.9-8.9-8.9-2.5 0-4.9 1-6.6 2.9H0v23.7h23.7V15.5c1.9-1.7 3-4.1 3-6.6zm-4.6 0c0 2.4-1.9 4.3-4.3 4.3s-4.3-1.9-4.3-4.3 1.9-4.3 4.3-4.3 4.3 1.9 4.3 4.3zM19.2 22H4.6V7.4H9c-.1.5-.1 1-.1 1.4 0 4.9 4 8.9 8.9 8.9.5 0 .9 0 1.4-.1V22z"
-          />
-        </svg>
-      </div>
-        </a>
-      <nav>
+        <div>
+          <!-- <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 114 26.6"
+            class="logo"
+            width="8rem"
+            fill="var(--logo-color, rgb(255,255,255))"
+          >
+            <path
+              d="M32.4 8.1h2.9v11.7h-2.9V8.1zm4 7.3c0-2.9 1.8-4.6 4.5-4.6s4.5 1.7 4.5 4.6-1.7 4.7-4.5 4.7-4.5-1.7-4.5-4.7zm6.2 0c0-1.6-.6-2.5-1.6-2.5s-1.6.9-1.6 2.5.6 2.5 1.6 2.5 1.6-.8 1.6-2.5zm4 5h2.8c.3.6.9 1 1.6.9 1.1 0 1.7-.6 1.7-1.5v-1.6c-.5 1-1.6 1.7-2.7 1.6-2.1 0-3.5-1.6-3.5-4.4s1.3-4.5 3.6-4.5c1.2-.1 2.3.6 2.7 1.7h-.1V11h2.9v8.8c0 2.1-1.9 3.4-4.6 3.4-2.6 0-4.2-1.1-4.4-2.8zm6-5c0-1.4-.6-2.3-1.7-2.3s-1.7.9-1.7 2.3.6 2.2 1.7 2.2 1.7-.7 1.7-2.2zm4 0c0-2.9 1.8-4.6 4.5-4.6s4.5 1.7 4.5 4.6-1.7 4.7-4.5 4.7-4.4-1.7-4.5-4.7zm6.2 0c0-1.6-.6-2.5-1.6-2.5s-1.6.9-1.6 2.5.6 2.5 1.6 2.5 1.6-.8 1.6-2.5zm4-6.5c0-.8.6-1.5 1.4-1.5.8 0 1.5.6 1.5 1.4 0 .8-.6 1.5-1.4 1.5h-.1c-.7 0-1.4-.6-1.4-1.4zm0 2.1h2.9v8.9h-2.9V11zm13.5 4.4c0 2.9-1.3 4.6-3.5 4.6-1.2.1-2.2-.6-2.7-1.6H74v4.4h-2.9V11H74v1.6c.4-1.1 1.5-1.8 2.7-1.7 2.3 0 3.6 1.6 3.6 4.5zm-3 0c0-1.4-.7-2.3-1.7-2.3s-1.7.9-1.7 2.3.6 2.3 1.7 2.3 1.8-.8 1.7-2.3zm7.9-4.6c2.4 0 3.9 1.1 3.9 3h-2.6c0-.6-.5-1-1.3-1s-1.2.2-1.2.7c0 .5.3.6 1 .7l1.9.4c1.8.4 2.5 1.1 2.5 2.4 0 1.8-1.7 3-4.1 3s-4.1-1.2-4.2-3h2.8c.1.7.6 1 1.4 1s1.2-.3 1.2-.7c0-.5-.3-.6-1-.7l-1.7-.4c-1.7-.4-2.6-1.3-2.6-2.6.1-1.7 1.6-2.8 4-2.8zM99 19.9h-2.8v-1.7h-.1c-.3 1.1-1.4 1.9-2.6 1.8-1.7.1-3.1-1.3-3.2-3v-6h2.9v5.1c0 1 .5 1.6 1.4 1.6.8 0 1.5-.7 1.5-1.5V11H99v8.9zm1.4-8.9h2.8v1.7h.1c.3-1.1 1.4-1.9 2.5-1.9 1.2-.1 2.3.7 2.5 1.9h.1c.4-1.2 1.5-1.9 2.7-1.9 1.5-.1 2.9 1.1 2.9 2.7v6.3h-2.9v-5.3c0-.9-.4-1.4-1.2-1.4-.7 0-1.3.5-1.3 1.2v5.5h-2.8v-5.3c0-.9-.4-1.4-1.2-1.4-.7 0-1.3.6-1.3 1.3v5.4h-2.9V11zM26.7 8.9c0-4.9-4-8.9-8.9-8.9-2.5 0-4.9 1-6.6 2.9H0v23.7h23.7V15.5c1.9-1.7 3-4.1 3-6.6zm-4.6 0c0 2.4-1.9 4.3-4.3 4.3s-4.3-1.9-4.3-4.3 1.9-4.3 4.3-4.3 4.3 1.9 4.3 4.3zM19.2 22H4.6V7.4H9c-.1.5-.1 1-.1 1.4 0 4.9 4 8.9 8.9 8.9.5 0 .9 0 1.4-.1V22z"
+            />
+          </svg> -->
+          <object
+            data="../assets/images/bulbtext.svg"
+            width="200"
+            height="75"
+          ></object>
+        </div>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <nav class="nav">
         <ul role="list" class="nav-list flex-group">
-          <li>
-            <a href="/">Home</a>
+          <li class="nav-item" data-nav="home"><a href="/">Home</a></li>
+          <li class="nav-item" data-nav="about"><a href="/about/">About</a></li>
+          <li class="nav-item" data-nav="services">
+            <a href="/services/">Services</a>
           </li>
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <a href="/services">Services</a>
-          </li>
-          <li>
-            <a href="/blog/">Blog</a>
-          </li>
-          <li>
+          <li class="nav-item" data-nav="blog"><a href="/blog/">Blog</a></li>
+          <li class="nav-item" data-nav="contact">
             <a href="/contact/">Contact</a>
           </li>
         </ul>
@@ -61,76 +168,158 @@
 <!-- ============================================ -->
 
 
-    <link rel="stylesheet" href="/assets/css/contact.css">
+<link rel="stylesheet" href="/assets/css/contact.css" />
 
 
+<div id="contact-bg-container">
+  <div id="bg-color">
+    <div id="contact-background"></div>
+  </div>
+</div>
+<h1 class="page-header-title">Contact</h1>
 
-<section  id="contact-1750">
-  <div id="fixed-image"></div>
-    <div class="cs-container">
-        <div class="cs-form-group">
-            <div class="cs-content">
-                <span class="cs-topper">Get in Touch</span>
-                <h2 class="cs-title">Contact Us</h2>
-            </div>
-            <!--Form-->
-            <form class="cs-form" id="cs-form-1750" name="Contact Form" method="post">
-                <label class="cs-label">
-                    Name *
-                    <input class="cs-input" required type="text" id="name-1750" name="name" placeholder="John Doe">
-                </label>
-                <label class="cs-label cs-email">
-                    Email *
-                    <input class="cs-input" required type="email" id="email-1750" name="email" placeholder="name@company.com">
-                </label>
-                <label class="cs-label cs-phone">
-                    Phone *
-                    <input class="cs-input" required type="phone" id="phone-1750" name="phone" placeholder="+1 (206) 987-6543">
-                </label>
-                <label class="cs-label">
-                    Message *
-                    <textarea class="cs-input cs-textarea" required name="Message" id="message-1750" placeholder="Hello, I am interested..."></textarea>
-                </label>
-                <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
-            </form>
-        </div>
-        <!--Contact Info-->
-        <div class="cs-info-group">
-            <div class="cs-info">
-                <span class="cs-topper">Location</span>
-                <span class="cs-detail">234-244 Stockwell Rd, 4th Floor<br>Brixton, SW9 9SP</span>
-            </div>
-            <div class="cs-info">
-                <span class="cs-topper">Working Hours</span>
-                <span class="cs-detail">Monday - Saturday: 10:00 - 20:00</span>
-                <span class="cs-detail">Sunday: Closed</span>
-            </div>
-            <div class="cs-info">
-                <span class="cs-topper">Contact</span>
-                <span class="cs-detail">M: +99 40 70 929</span>
-                <span class="cs-detail">E: info@stitchgym.com</span>
-            </div>
-        </div>
-    </div>
-
-</section>
-                                
-
-    </main>
-      <footer class="site-footer">
+<section class="gradient top-section">
+  <div class="bg-curve-white-bottom">
     <svg
+      data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 114 26.6"
-      class="logo"
-      width="8rem"
-      fill="var(--logo-color, #000)"
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
     >
       <path
-        d="M32.4 8.1h2.9v11.7h-2.9V8.1zm4 7.3c0-2.9 1.8-4.6 4.5-4.6s4.5 1.7 4.5 4.6-1.7 4.7-4.5 4.7-4.5-1.7-4.5-4.7zm6.2 0c0-1.6-.6-2.5-1.6-2.5s-1.6.9-1.6 2.5.6 2.5 1.6 2.5 1.6-.8 1.6-2.5zm4 5h2.8c.3.6.9 1 1.6.9 1.1 0 1.7-.6 1.7-1.5v-1.6c-.5 1-1.6 1.7-2.7 1.6-2.1 0-3.5-1.6-3.5-4.4s1.3-4.5 3.6-4.5c1.2-.1 2.3.6 2.7 1.7h-.1V11h2.9v8.8c0 2.1-1.9 3.4-4.6 3.4-2.6 0-4.2-1.1-4.4-2.8zm6-5c0-1.4-.6-2.3-1.7-2.3s-1.7.9-1.7 2.3.6 2.2 1.7 2.2 1.7-.7 1.7-2.2zm4 0c0-2.9 1.8-4.6 4.5-4.6s4.5 1.7 4.5 4.6-1.7 4.7-4.5 4.7-4.4-1.7-4.5-4.7zm6.2 0c0-1.6-.6-2.5-1.6-2.5s-1.6.9-1.6 2.5.6 2.5 1.6 2.5 1.6-.8 1.6-2.5zm4-6.5c0-.8.6-1.5 1.4-1.5.8 0 1.5.6 1.5 1.4 0 .8-.6 1.5-1.4 1.5h-.1c-.7 0-1.4-.6-1.4-1.4zm0 2.1h2.9v8.9h-2.9V11zm13.5 4.4c0 2.9-1.3 4.6-3.5 4.6-1.2.1-2.2-.6-2.7-1.6H74v4.4h-2.9V11H74v1.6c.4-1.1 1.5-1.8 2.7-1.7 2.3 0 3.6 1.6 3.6 4.5zm-3 0c0-1.4-.7-2.3-1.7-2.3s-1.7.9-1.7 2.3.6 2.3 1.7 2.3 1.8-.8 1.7-2.3zm7.9-4.6c2.4 0 3.9 1.1 3.9 3h-2.6c0-.6-.5-1-1.3-1s-1.2.2-1.2.7c0 .5.3.6 1 .7l1.9.4c1.8.4 2.5 1.1 2.5 2.4 0 1.8-1.7 3-4.1 3s-4.1-1.2-4.2-3h2.8c.1.7.6 1 1.4 1s1.2-.3 1.2-.7c0-.5-.3-.6-1-.7l-1.7-.4c-1.7-.4-2.6-1.3-2.6-2.6.1-1.7 1.6-2.8 4-2.8zM99 19.9h-2.8v-1.7h-.1c-.3 1.1-1.4 1.9-2.6 1.8-1.7.1-3.1-1.3-3.2-3v-6h2.9v5.1c0 1 .5 1.6 1.4 1.6.8 0 1.5-.7 1.5-1.5V11H99v8.9zm1.4-8.9h2.8v1.7h.1c.3-1.1 1.4-1.9 2.5-1.9 1.2-.1 2.3.7 2.5 1.9h.1c.4-1.2 1.5-1.9 2.7-1.9 1.5-.1 2.9 1.1 2.9 2.7v6.3h-2.9v-5.3c0-.9-.4-1.4-1.2-1.4-.7 0-1.3.5-1.3 1.2v5.5h-2.8v-5.3c0-.9-.4-1.4-1.2-1.4-.7 0-1.3.6-1.3 1.3v5.4h-2.9V11zM26.7 8.9c0-4.9-4-8.9-8.9-8.9-2.5 0-4.9 1-6.6 2.9H0v23.7h23.7V15.5c1.9-1.7 3-4.1 3-6.6zm-4.6 0c0 2.4-1.9 4.3-4.3 4.3s-4.3-1.9-4.3-4.3 1.9-4.3 4.3-4.3 4.3 1.9 4.3 4.3zM19.2 22H4.6V7.4H9c-.1.5-.1 1-.1 1.4 0 4.9 4 8.9 8.9 8.9.5 0 .9 0 1.4-.1V22z"
-      />
+        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+        class="shape-fill"
+      ></path>
     </svg>
-    <p>© <script>document.write(new Date().getFullYear())</script> Company Name. All rights reserved.</p>
-  </footer>
+  </div>
+  <div class="content pb-md pt-lg">
+    <div id="contact-1750">
+      <div id="fixed-image"></div>
+      <div class="cs-container">
+        <!--Contact Info-->
+        <div class="cs-info-group dark-text">
+          <div class="cs-info">
+            <div class="cs-info-subgroup">
+              <hr />
+              <div>
+                <h3>Phone:</h3>
+                <p>+1 512 645 9719</p>
+              </div>
+            </div>
+            <div class="cs-info-subgroup">
+              <hr />
+              <div>
+                <h3>Email:</h3>
+                <p>toby.webhelp@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cs-form-group">
+          <div class="cs-content">
+            <h2 class="cs-title">Contact Us</h2>
+          </div>
+          <!--Form-->
+          <form
+            class="cs-form"
+            id="cs-form-1750"
+            name="Contact Form"
+            method="post"
+          >
+            <label class="cs-label">
+              <input
+                class="cs-input"
+                required
+                type="text"
+                id="name-1750"
+                name="name"
+                placeholder="Your Name"
+              />
+            </label>
+            <label class="cs-label cs-email">
+              <input
+                class="cs-input"
+                required
+                type="email"
+                id="email-1750"
+                name="email"
+                placeholder="Your Email Address"
+              />
+            </label>
+            <label class="cs-label cs-phone">
+              <input
+                class="cs-input"
+                required
+                type="phone"
+                id="phone-1750"
+                name="phone"
+                placeholder="Your Phone Number"
+              />
+            </label>
+            <label class="cs-label">
+              <textarea
+                class="cs-input cs-textarea"
+                required
+                name="Message"
+                id="message-1750"
+                placeholder="Type your Message Here..."
+              ></textarea>
+            </label>
+            <button class="cs-button-solid cs-submit" type="submit">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer class="site-footer pt-sm">
+  <div class="upper-footer">
+    <div>
+      <div class="footer-logo">
+        <object
+          data="../assets/images/bulbtext.svg"
+          width="200"
+          height="75"
+        ></object>
+      </div>
+      <ul>
+        <li>toby.webhelp@gmail.com</li>
+        <li>512-645-9719</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Navigation</h3>
+      <hr class="footer-nav-underline" />
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Blog</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+  </div>
+  <hr class="footer-divider" />
+  <div class="copyright-container">
+    <object
+      data="../assets/images/bulbtext.svg"
+      width="200"
+      height="40"
+    ></object>
+    <p>
+      Copyright ©
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+      . Lucid Web Designs . All rights reserved.
+    </p>
+  </div>
+</footer>
+
 
     <script>
       if (window.netlifyIdentity) {
