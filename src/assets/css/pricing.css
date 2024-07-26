@@ -115,9 +115,7 @@
     /* 48px - 64px top & bottom */
     /* 16px - 32px left & right */
     padding: clamp(3rem, 6vw, 4rem) clamp(1rem, 1.5vw, 2rem);
-    /* box-shadow: 10px 5px 5px rgba(100, 100 255, 1); */
-    box-shadow: -1px -5px 15px rgba(66, 183, 255, 0.35),
-      1px -5px 15px rgba(66, 183, 255, 0.35);
+    box-shadow: var(--item-box-shadow);
 
     margin: 0 25px;
     z-index: 1;

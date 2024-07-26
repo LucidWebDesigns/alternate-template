@@ -12,6 +12,8 @@
   --bg-pos-y-img-1-big: -130vh;
   --img-1-opc: 15%;
   --bg-color: rgb(15, 88, 133);
+  --item-box-shadow: -1px -5px 15px rgba(66, 183, 255, 0.35),
+    1px -5px 15px rgba(66, 183, 255, 0.35);
 
   /*################################# code stitch #################################*/
   /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
