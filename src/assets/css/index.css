@@ -19,9 +19,10 @@
   display: flex;
   --flow-spacer: 3rem;
   gap: 2em;
-  margin: 1rem;
+  /* margin: 1rem; */
   width: 100%;
   align-items: center;
+  justify-content: center;
 }
 
 /* //////////////////////
@@ -49,7 +50,7 @@
   box-shadow: var(--item-box-shadow);
   padding: 3em 2em;
   border-radius: 5px;
-  max-width: clamp(10rem, 50vw, 30rem);
+  max-width: clamp(10rem, 300px, 30rem);
 }
 
 .snippet__body {
