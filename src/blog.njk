@@ -16,7 +16,7 @@ layout: "base.njk"
 <h1 class="page-header-title">Blog</h1>
 
 <section class="top-section white-bg">
-  <div class="content pt-md">
+  <div class="content pt-md pb-lg">
     <ul role="list" class="articles__list flow">
       {%- for post in collections.post | reverse -%} {% include
       "article-snippet.njk" %} {%- endfor %}
