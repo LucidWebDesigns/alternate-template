@@ -77,9 +77,6 @@
   text-decoration: none;
 }
 
-.nav-item.active {
-  border-bottom: 3px solid var(--primary);
-}
 /* //////////////////////
   RESET - source: https://piccalil.li/blog/a-modern-css-reset
   /////////////////////// */
@@ -382,6 +379,10 @@ ul {
 @media (max-width: 868px) {
   .page-header {
     padding: 2em 1em;
+    z-index: 1000;
+  }
+  .nav-item.active {
+    background: var(--primary);
   }
   .cs-background {
     min-width: 100vw;
@@ -464,6 +465,9 @@ ul {
 @media (min-width: 869px) {
   .page-header {
     padding: 2em 12vw;
+  }
+  .nav-item.active {
+    border-bottom: 3px solid var(--primary);
   }
   .cs-background {
     min-width: 100vw;
