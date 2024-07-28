@@ -417,12 +417,26 @@ ul {
     z-index: 1000;
   }
 
+  .nav-list {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 17.5vh;
+  }
+
+  .nav-list li {
+    width: 100%;
+    text-align: center;
+    padding: 0.25rem 0;
+  }
   .nav {
+    top: 0%;
+    height: 100vh;
+    transition: 0.5s;
     width: 250px;
-    display: none;
+    /* display: none; */
     position: absolute;
-    right: 0;
-    top: 100%;
+    right: -250px;
+    /* top: 100%; */
     /* background: var(--clr-neutral-100); */
     /* background: rgba(0, 0, 0, 0.85); */
     background: linear-gradient(
@@ -436,27 +450,19 @@ ul {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  .nav-list {
-    flex-direction: column;
-    width: 100%;
-    margin-top: 17.5vh;
-  }
-
-  .nav-list li {
-    width: 100%;
-    text-align: center;
-    padding: 0.25rem 0;
-  }
-
   .nav-toggle:checked + .nav-toggle-label + .nav {
     /* position: fixed; */
-    top: 0%;
-    height: 100vh;
+    right: 0;
     z-index: 100;
     display: flex;
     flex-direction: column;
     /* margin-top:20%; */
     /* justify-content: center; */
+  }
+  .pointer-none {
+    pointer-events: none;
+  }
+  .empty-class {
   }
 
   .nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
@@ -469,6 +475,46 @@ ul {
 
   .nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
     transform: rotate(-45deg) translateY(-0.7rem);
+  }
+  .nav-list li:nth-child(1) {
+    opacity: 0%;
+    transition: 0.75s;
+    transition-delay: 0.1s;
+  }
+  .nav-list li:nth-child(2) {
+    opacity: 0%;
+    transition: 0.75s;
+    transition-delay: 0.2s;
+  }
+  .nav-list li:nth-child(3) {
+    opacity: 0%;
+    transition: 0.75s;
+    transition-delay: 0.3s;
+  }
+  .nav-list li:nth-child(4) {
+    opacity: 0%;
+    transition: 0.75s;
+    transition-delay: 0.4s;
+  }
+  .nav-list li:nth-child(5) {
+    opacity: 0%;
+    transition: 0.75s;
+    transition-delay: 0.5s;
+  }
+  .nav-toggle:checked + .nav-toggle-label + .nav li:nth-child(1) {
+    opacity: 100%;
+  }
+  .nav-toggle:checked + .nav-toggle-label + .nav li:nth-child(2) {
+    opacity: 100%;
+  }
+  .nav-toggle:checked + .nav-toggle-label + .nav li:nth-child(3) {
+    opacity: 100%;
+  }
+  .nav-toggle:checked + .nav-toggle-label + .nav li:nth-child(4) {
+    opacity: 100%;
+  }
+  .nav-toggle:checked + .nav-toggle-label + .nav li:nth-child(5) {
+    opacity: 100%;
   }
 }
 
