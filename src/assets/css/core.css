@@ -478,27 +478,27 @@ ul {
   }
   .nav-list li:nth-child(1) {
     opacity: 0%;
-    transition: 0.75s;
+    transition: 0.5s;
     transition-delay: 0.1s;
   }
   .nav-list li:nth-child(2) {
     opacity: 0%;
-    transition: 0.75s;
+    transition: 0.5s;
     transition-delay: 0.2s;
   }
   .nav-list li:nth-child(3) {
     opacity: 0%;
-    transition: 0.75s;
+    transition: 0.5s;
     transition-delay: 0.3s;
   }
   .nav-list li:nth-child(4) {
     opacity: 0%;
-    transition: 0.75s;
+    transition: 0.5s;
     transition-delay: 0.4s;
   }
   .nav-list li:nth-child(5) {
     opacity: 0%;
-    transition: 0.75s;
+    transition: 0.5s;
     transition-delay: 0.5s;
   }
   .nav-toggle:checked + .nav-toggle-label + .nav li:nth-child(1) {

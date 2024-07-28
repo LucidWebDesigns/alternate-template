@@ -89,16 +89,29 @@
         let clicked = false;
         if (toggler) {
           toggler.addEventListener("click", function () {
-            if (toggler.classList.contains("empty-class")) {
-              toggler.classList.remove("empty-class");
+            console.log("hi");
+            if (!toggler.classList.contains("pointer-none")) {
               toggler.classList.add("pointer-none");
-            } else {
-              toggler.classList.add("empty-class");
               setTimeout(() => {
                 toggler.classList.remove("pointer-none");
-              }, 1250);
+              }, 750);
+            } else {
+              console.log("bye");
             }
           });
+
+          // if (toggler) {
+          //   toggler.addEventListener("click", function () {
+          //     if (toggler.classList.contains("empty-class")) {
+          //       toggler.classList.remove("empty-class");
+          //       toggler.classList.add("pointer-none");
+          //     } else {
+          //       toggler.classList.add("empty-class");
+          //       setTimeout(() => {
+          //         toggler.classList.remove("pointer-none");
+          //       }, 1250);
+          //     }
+          //   });
         } else {
           console.error("Element with id 'nav-toggle' not found.");
         }
