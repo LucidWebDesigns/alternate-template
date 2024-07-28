@@ -70,7 +70,6 @@
 }
 
 .nav-item a {
-  display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
@@ -381,8 +380,13 @@ ul {
     padding: 2em 1em;
     z-index: 1000;
   }
+  .nav-item {
+    max-width: 100px;
+    margin-left: 100px;
+  }
   .nav-item.active {
-    background: var(--primary);
+    /* background: var(--primary); */
+    border-right: 3.5px solid var(--primary);
   }
   .cs-background {
     min-width: 100vw;
@@ -414,13 +418,19 @@ ul {
   }
 
   .nav {
+    width: 250px;
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
     right: 0;
+    top: 100%;
     /* background: var(--clr-neutral-100); */
-    background: rgba(0, 0, 0, 0.85);
+    /* background: rgba(0, 0, 0, 0.85); */
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(1, 60, 132, 1) 100%,
+      rgba(0, 149, 255, 1) 100%
+    );
     flex-direction: column;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -429,23 +439,24 @@ ul {
   .nav-list {
     flex-direction: column;
     width: 100%;
+    margin-top: 17.5vh;
   }
 
   .nav-list li {
     width: 100%;
     text-align: center;
-    padding: 1rem 0;
+    padding: 0.25rem 0;
   }
 
   .nav-toggle:checked + .nav-toggle-label + .nav {
-    position: fixed;
+    /* position: fixed; */
     top: 0%;
     height: 100vh;
     z-index: 100;
     display: flex;
     flex-direction: column;
     /* margin-top:20%; */
-    justify-content: center;
+    /* justify-content: center; */
   }
 
   .nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
@@ -620,7 +631,7 @@ ul {
 @media only screen and (min-width: 0rem) {
   .page-header-title {
     text-align: center;
-    margin-top: 17vh;
+    margin-top: 20vh;
   }
   #bg-color {
     background-color: var(--bg-color);
