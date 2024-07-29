@@ -813,10 +813,13 @@ font sizes, styles
     max-height: var(--min-vh-img-1-mobile);
   }
   .fixed-background {
+    position: fixed;
     opacity: var(--img-1-opc);
     background-color: var(--bg-color);
-    width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    min-width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
   }
   .fixed-bg-container {
     position: fixed;
