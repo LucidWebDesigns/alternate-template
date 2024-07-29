@@ -801,7 +801,7 @@ font sizes, styles
   .bg-overlay {
     position: fixed;
     z-index: 50;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-repeat: no-repeat;
     background-size: contain;
     top: 0;
