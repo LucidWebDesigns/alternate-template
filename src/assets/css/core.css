@@ -389,14 +389,6 @@ ul {
     /* background: var(--primary); */
     border-right: 3.5px solid var(--primary);
   }
-  .cs-background {
-    min-width: 100vw;
-    position: absolute;
-    left: 0;
-    /* margin: -72px; */
-    padding: 0;
-    margin: -0.5em;
-  }
   /* ******************************* */
   /* ******************************* */
   /* ******************************* */
@@ -407,9 +399,7 @@ ul {
   .section {
     padding: min(10vh, 10em) 0.5em;
   } */
-  .top-section {
-    margin-top: 30vh;
-  }
+
   .top-section-jumboless {
     padding-top: 12.5vh;
   }
@@ -465,7 +455,9 @@ ul {
   }
   .empty-class {
   }
-
+  .nav-toggle-label span {
+    box-shadow: 1px 1px 1px black;
+  }
   .nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
     transform: rotate(45deg) translateY(0.7rem);
   }
@@ -527,23 +519,27 @@ ul {
     transition: 0.5s;
     transition-delay: 0.5s;
   }
+  .top-section {
+    margin-top: 40vh;
+  }
+  .page-header-title {
+    text-align: center;
+    position: absolute;
+    top: 30%;
+  }
 }
 
 /* Desktop styles */
 @media (min-width: 869px) {
+  .page-header-title {
+    text-align: center;
+    margin-top: 30vh;
+  }
   .page-header {
     padding: 2em 12vw;
   }
   .nav-item.active {
     border-bottom: 3px solid var(--primary);
-  }
-  .cs-background {
-    min-width: 100vw;
-    position: absolute;
-    left: 0;
-    /* margin: -72px; */
-    padding: 0;
-    margin: -3em;
   }
   /* section,
   .section {
@@ -686,9 +682,9 @@ ul {
 }
 
 @media only screen and (min-width: 0rem) {
-  .page-header-title {
-    text-align: center;
-    margin-top: 20vh;
+  .cs-button-solid-container {
+    display: flex;
+    justify-content: center;
   }
   #bg-color {
     background-color: var(--bg-color);
@@ -698,18 +694,6 @@ ul {
     top: 0;
     width: 100%;
   }
-}
-@media only screen and (min-width: 48rem) {
-  .page-header-title {
-    text-align: center;
-    position: absolute;
-    top: 15%;
-  }
-}
-
-section {
-  /* border-top: 10px solid red;
-  border-bottom: 10px solid rgb(0, 64, 255); */
 }
 
 /* section styles */
@@ -810,4 +794,12 @@ font sizes, styles
 .href-link {
   text-decoration: none;
   color: var(--primary);
+}
+
+#excellence-content,
+#featured-articles,
+#crafted-content {
+  text-align: center;
+  max-width: 650px;
+  margin: auto;
 }
