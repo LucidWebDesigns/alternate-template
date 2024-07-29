@@ -6,9 +6,9 @@
   --margin-img-1-big: 50vh;
   --min-vh-img-1-mobile: 100vh;
   --min-vh-img-1-big: 100vh;
-  --bg-size-img-1-mobile: 150%;
+  --bg-size-img-1-mobile: 175%;
   --bg-size-img-1-big: 100%;
-  --bg-pos-y-img-1-mobile: -20vh;
+  --bg-pos-y-img-1-mobile: -45vh;
   --bg-pos-y-img-1-big: -100vh;
   --img-1-opc: 55%;
   --bg-color: rgb(15, 88, 133);
@@ -803,11 +803,12 @@ font sizes, styles
     z-index: 50;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: contain;
+    /* background-size: contain; */
     top: 0;
     width: 100%;
     background-image: var(--url-img-1);
     background-position-y: var(--bg-pos-y-img-1-mobile);
+    background-size: var(--bg-size-img-1-mobile);
   }
   .fixed-background {
     opacity: var(--img-1-opc);
