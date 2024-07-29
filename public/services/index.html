@@ -86,17 +86,14 @@
       // Select all elements you want to add the event listener to
       document.addEventListener("DOMContentLoaded", function () {
         const toggler = document.getElementById("toggler-btn");
-        let clicked = false;
         if (toggler) {
           toggler.addEventListener("click", function () {
-            console.log("hi");
             if (!toggler.classList.contains("pointer-none")) {
               toggler.classList.add("pointer-none");
               setTimeout(() => {
                 toggler.classList.remove("pointer-none");
               }, 750);
             } else {
-              console.log("bye");
             }
           });
 
