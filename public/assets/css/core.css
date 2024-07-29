@@ -799,7 +799,7 @@ font sizes, styles
     justify-content: center;
   }
   .bg-overlay {
-    position: absolute;
+    position: fixed;
     z-index: 50;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -824,6 +824,7 @@ font sizes, styles
 }
 @media only screen and (min-width: 48rem) {
   .bg-overlay {
+    position: fixed;
     background-position-y: var(--bg-pos-y-img-1-big);
     background-size: var(--bg-size-img-1-big);
     background-repeat: no-repeat;
