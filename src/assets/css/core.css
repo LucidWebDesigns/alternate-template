@@ -8,8 +8,8 @@
   --min-vh-img-1-big: 100vh;
   --bg-size-img-1-mobile: 150%;
   --bg-size-img-1-big: 100%;
-  --bg-pos-y-img-1-mobile: -45vh;
-  --bg-pos-y-img-1-big: -130vh;
+  --bg-pos-y-img-1-mobile: -20vh;
+  --bg-pos-y-img-1-big: -100vh;
   --img-1-opc: 55%;
   --bg-color: rgb(15, 88, 133);
   --item-box-shadow: -1px -5px 15px rgba(66, 183, 255, 0.35),
@@ -807,6 +807,7 @@ font sizes, styles
     top: 0;
     width: 100%;
     background-image: var(--url-img-1);
+    background-position-y: var(--bg-pos-y-img-1-mobile);
   }
   .fixed-background {
     opacity: var(--img-1-opc);
