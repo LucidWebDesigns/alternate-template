@@ -10,7 +10,7 @@
   --bg-size-img-1-big: 100%;
   --bg-pos-y-img-1-mobile: -45vh;
   --bg-pos-y-img-1-big: -130vh;
-  --img-1-opc: 15%;
+  --img-1-opc: 55%;
   --bg-color: rgb(15, 88, 133);
   --item-box-shadow: -1px -5px 15px rgba(66, 183, 255, 0.35),
     1px -5px 15px rgba(66, 183, 255, 0.35);
@@ -681,21 +681,6 @@ ul {
   margin: 2em 0;
 }
 
-@media only screen and (min-width: 0rem) {
-  .cs-button-solid-container {
-    display: flex;
-    justify-content: center;
-  }
-  #bg-color {
-    background-color: var(--bg-color);
-    position: absolute;
-    z-index: 50;
-    background-attachment: fixed;
-    top: 0;
-    width: 100%;
-  }
-}
-
 /* section styles */
 /* 
 color,
@@ -802,4 +787,45 @@ font sizes, styles
   text-align: center;
   max-width: 650px;
   margin: auto;
+}
+
+@media only screen and (min-width: 0rem) {
+  .cs-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .cs-button-solid-container {
+    display: flex;
+    justify-content: center;
+  }
+  .bg-overlay {
+    position: absolute;
+    z-index: 50;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    width: 100%;
+    background-image: var(--url-img-1);
+  }
+  .fixed-background {
+    opacity: var(--img-1-opc);
+    background-color: var(--bg-color);
+    width: 100vw;
+    height: 100vh;
+  }
+  .fixed-bg-container {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+  }
+}
+@media only screen and (min-width: 48rem) {
+  .bg-overlay {
+    background-position-y: var(--bg-pos-y-img-1-big);
+    background-size: var(--bg-size-img-1-big);
+    background-repeat: no-repeat;
+    min-height: var(--min-vh-img-1-big);
+    max-height: var(--min-vh-img-1-big);
+  }
 }

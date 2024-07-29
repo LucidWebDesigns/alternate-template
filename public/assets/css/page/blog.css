@@ -1,53 +1,3 @@
-@media only screen and (min-width: 0rem) {
-  #blog-background {
-    background-position-y: var(--bg-pos-y-img-1-mobile);
-    background-size: var(--bg-size-img-1-mobile);
-    background-repeat: no-repeat;
-    min-height: var(--min-vh-img-1-mobile);
-    max-height: var(--min-vh-img-1-mobile);
-  }
-  #blog-container {
-    margin-top: var(--margin-img-1-mobile);
-  }
-}
-@media only screen and (min-width: 48rem) {
-  #blog-background {
-    background-position-y: var(--bg-pos-y-img-1-big);
-    background-size: var(--bg-size-img-1-big);
-    background-repeat: no-repeat;
-    min-height: var(--min-vh-img-1-big);
-    max-height: var(--min-vh-img-1-big);
-  }
-  #blog-container {
-    margin-top: var(--margin-img-1-big);
-  }
-}
-#blog-background {
-  background-image: var(--url-img-1);
-  opacity: var(--img-1-opc);
-}
-#blog-container h1 {
-  color: white;
-  text-align: center;
-  margin-top: -35vh;
-  padding-bottom: 25%;
-}
-#blog-container {
-  /* z-index: 100;  */
-  color: white;
-  position: relative;
-  background-color: white;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(1, 60, 132, 1) 0%,
-    rgba(0, 149, 255, 1) 100%
-  );
-  z-index: 40;
-  min-width: 100vw;
-}
-
 .btn {
   cursor: pointer;
   text-decoration: none;
@@ -87,12 +37,4 @@
 .btn--neutral:focus {
   color: var(--clr-neutral-100);
   background-color: var(--clr-neutral-900);
-}
-#blog-background h1 {
-  margin: auto;
-}
-#blog-bg-container {
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
 }

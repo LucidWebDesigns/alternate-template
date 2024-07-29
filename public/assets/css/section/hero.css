@@ -4,11 +4,11 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  .cs-wrapper {
-    display: flex;
-    justify-content: center;
+  #hero .cs-title {
+    width: 100%;
   }
-  #hero-1618 .cs-card-group {
+
+  #hero .cs-card-group {
     margin: 2em 0 5em 0;
     padding: 0;
     width: 100%;
@@ -19,7 +19,7 @@
     text-align: center;
     flex-direction: column;
   }
-  #hero-1618 .cs-item {
+  #hero .cs-item {
     width: 100%;
     list-style: none;
     margin: 0;
@@ -34,13 +34,13 @@
     z-index: 1;
     align-self: flex-start;
   }
-  #hero-1618 .cs-icon {
+  #hero .cs-icon {
     width: 4.5rem;
     height: auto;
     margin: 0 0 1.5rem 0;
     color: #fff;
   }
-  #hero-1618 .cs-h3 {
+  #hero .cs-h3 {
     /* 20px - 25px */
     font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
     line-height: 1.2em;
@@ -52,7 +52,7 @@
 }
 
 @media only screen and (min-width: 73.5rem) {
-  #hero-1618 .cs-card-group {
+  #hero .cs-card-group {
     flex-direction: row;
     margin: 2em 0 4em 0;
   }

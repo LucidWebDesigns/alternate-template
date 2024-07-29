@@ -4,17 +4,14 @@ layout: "base.njk"
 ---
 
 {% block head %}
-<link rel="stylesheet" href="/assets/css/page/services.css" />
 <link rel="stylesheet" href="/assets/css/section/pricing.css" />
 <link rel="stylesheet" href="/assets/css/section/side-by-side.css" />
 <link rel="stylesheet" href="/assets/css/section/services.css" />
-
 {% endblock %}
 
-<div id="services-bg-container">
-  
-  <div id="bg-color">
-    <div id="services-background"></div>
+<div class="fixed-bg-container">
+  <div class="bg-overlay">
+    <div class="fixed-background"></div>
   </div>
 </div>
 <h1 class="page-header-title">Services</h1>
@@ -195,7 +192,7 @@ layout: "base.njk"
   <!--                P R I C I N G                 -->
   <!-- ============================================ -->
 
-  <section id="pricing-1790" class="gradient">
+  <section id="pricing" class="gradient">
     <div class="bg-curve-white-bottom">
     <svg
       data-name="Layer 1"

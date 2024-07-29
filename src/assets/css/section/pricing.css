@@ -12,7 +12,7 @@
   .cs-item {
     margin: 0;
   }
-  #pricing-1790 {
+  #pricing {
     /* padding: var(--sectionPadding); */
     padding-bottom: 10vw;
     /* background-color: #f7f7f7; */
@@ -20,7 +20,7 @@
     overflow: hidden;
     z-index: 1;
   }
-  #pricing-1790 .cs-container {
+  #pricing .cs-container {
     width: 100%;
     max-width: 80rem;
     margin: auto;
@@ -29,7 +29,7 @@
     align-items: center;
     position: relative;
   }
-  #pricing-1790 .cs-content {
+  #pricing .cs-content {
     /* set text align to center if content needs to be center aligned */
     text-align: left;
     width: 100%;
@@ -39,14 +39,14 @@
     align-items: flex-start;
     position: relative;
   }
-  #pricing-1790 .cs-flex {
+  #pricing .cs-flex {
     display: flex;
     flex-direction: column;
   }
-  #pricing-1790 .cs-title {
+  #pricing .cs-title {
     margin: 0;
   }
-  #pricing-1790 .cs-wrapper {
+  #pricing .cs-wrapper {
     width: 100%;
     max-width: 80rem;
     display: flex;
@@ -54,7 +54,7 @@
     align-items: center;
     justify-content: center;
   }
-  #pricing-1790 .cs-ul {
+  #pricing .cs-ul {
     width: 100%;
     margin: 1.5rem 0 0 0;
     padding: 0;
@@ -63,7 +63,7 @@
     align-items: flex-start;
     gap: 0.75rem;
   }
-  #pricing-1790 .cs-li {
+  #pricing .cs-li {
     font-size: var(--bodyFontSize);
     list-style: none;
     line-height: 1.5em;
@@ -76,12 +76,12 @@
     align-items: flex-start;
     gap: 0.5rem;
   }
-  #pricing-1790 .cs-icon {
+  #pricing .cs-icon {
     width: 1.125rem;
     height: auto;
     display: block;
   }
-  #pricing-1790 .cs-card-group {
+  #pricing .cs-card-group {
     gap: 2em;
     width: 100%;
     max-width: 57rem;
@@ -91,7 +91,7 @@
     flex-direction: column;
     align-items: center;
   }
-  #pricing-1790 .cs-item {
+  #pricing .cs-item {
     text-align: center;
     list-style: none;
     width: 100%;
@@ -110,7 +110,7 @@
     border: 2px solid rgba(222, 242, 255, 0.75);
     border-radius: 5px;
   }
-  #pricing-1790 .cs-item.cs-popular {
+  #pricing .cs-item.cs-popular {
     background-color: #fff;
     /* 48px - 64px top & bottom */
     /* 16px - 32px left & right */
@@ -125,27 +125,27 @@
     color: var(--primary);
     font-size: 5em;
   }
-  #pricing-1790 .cs-item.cs-popular .cs-package,
-  #pricing-1790 .cs-item.cs-popular .cs-frequency,
-  #pricing-1790 .cs-item.cs-popular .cs-item-text {
+  #pricing .cs-item.cs-popular .cs-package,
+  #pricing .cs-item.cs-popular .cs-frequency,
+  #pricing .cs-item.cs-popular .cs-item-text {
     opacity: 0.9;
   }
-  #pricing-1790 .cs-item .cs-price {
+  #pricing .cs-item .cs-price {
     color: var(--primary);
   }
-  #pricing-1790 .cs-item .cs-frequency {
+  #pricing .cs-item .cs-frequency {
     color: var(--primary);
   }
-  #pricing-1790 .cs-item.cs-popular .cs-button-solid {
+  #pricing .cs-item.cs-popular .cs-button-solid {
     transition: color 0.3s;
   }
-  #pricing-1790 .cs-item.cs-popular .cs-button-solid:hover {
+  #pricing .cs-item.cs-popular .cs-button-solid:hover {
     color: var(--primary);
   }
-  #pricing-1790 .cs-item.cs-popular .cs-button-solid:before {
+  #pricing .cs-item.cs-popular .cs-button-solid:before {
     background-color: #fff;
   }
-  #pricing-1790 .cs-package {
+  #pricing .cs-package {
     /* 13px - 16px */
     font-size: 1rem;
     font-weight: 400;
@@ -156,7 +156,7 @@
     color: var(--bodyTextColor);
     display: block;
   }
-  #pricing-1790 .cs-flex-wrapper {
+  #pricing .cs-flex-wrapper {
     width: 100%;
     margin: 0 0 1.5rem 0;
     padding: 0 0 1.5rem;
@@ -168,7 +168,7 @@
     position: relative;
     z-index: 1;
   }
-  #pricing-1790 .cs-flex-wrapper:after {
+  #pricing .cs-flex-wrapper:after {
     content: "";
     width: 100%;
     height: 1px;
@@ -184,7 +184,7 @@
     left: 0;
     display: block;
   }
-  #pricing-1790 .cs-price {
+  #pricing .cs-price {
     /* font-size: var(--headerFontSize); */
     font-size: 3em;
     font-weight: 400;
@@ -193,7 +193,7 @@
     margin: 0;
     color: var(--headerColor);
   }
-  #pricing-1790 .cs-frequency {
+  #pricing .cs-frequency {
     font-size: 1rem;
     line-height: 1.5em;
     text-align: inherit;
@@ -201,7 +201,7 @@
     color: var(--bodyTextColor);
     display: block;
   }
-  #pricing-1790 .cs-item-text {
+  #pricing .cs-item-text {
     font-size: 1rem;
     line-height: 1.5em;
     text-align: inherit;
@@ -215,7 +215,7 @@
   .cs-item-header {
     color: black;
   }
-  #pricing-1790 .cs-button-solid {
+  #pricing .cs-button-solid {
     font-size: 1rem;
     font-weight: 700;
     /* 46px - 56px */
@@ -234,7 +234,7 @@
     position: relative;
     z-index: 1;
   }
-  #pricing-1790 .cs-button-solid:before {
+  #pricing .cs-button-solid:before {
     content: "";
     width: 0%;
     height: 100%;
@@ -247,10 +247,10 @@
     z-index: -1;
     transition: width 0.3s;
   }
-  #pricing-1790 .cs-button-solid:hover:before {
+  #pricing .cs-button-solid:hover:before {
     width: 100%;
   }
-  #pricing-1790 .cs-graphic {
+  #pricing .cs-graphic {
     width: 100%;
     min-width: 120rem;
     height: auto;
@@ -259,53 +259,53 @@
     left: 0rem;
     z-index: -1;
   }
-  #pricing-1790 .cs-dark {
+  #pricing .cs-dark {
     display: none;
   }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #pricing-1790 .cs-container {
+  #pricing .cs-container {
     /* 48px - 64px */
     gap: clamp(3rem, 6vw, 4rem);
   }
-  #pricing-1790 .cs-content {
+  #pricing .cs-content {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
   }
-  #pricing-1790 .cs-ul {
+  #pricing .cs-ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: stretch;
   }
-  #pricing-1790 .cs-card-group {
+  #pricing .cs-card-group {
     gap: 0;
     flex-direction: row;
     align-items: stretch;
   }
-  #pricing-1790 .cs-item {
+  #pricing .cs-item {
     height: auto;
     margin: 1.5rem 0;
   }
-  #pricing-1790 .cs-item.cs-popular {
+  #pricing .cs-item.cs-popular {
     margin: 0;
   }
 }
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-  #pricing-1790 .cs-ul {
+  #pricing .cs-ul {
     width: 30%;
     display: flex;
   }
-  #pricing-1790 .cs-wrapper {
+  #pricing .cs-wrapper {
     flex-direction: row;
     gap: 1.25rem;
   }
-  #pricing-1790 .cs-card-group {
+  #pricing .cs-card-group {
     margin: 0;
   }
-  #pricing-1790 .cs-item {
+  #pricing .cs-item {
     min-height: 25rem;
   }
 }

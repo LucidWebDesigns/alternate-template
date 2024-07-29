@@ -122,16 +122,6 @@
     line-height: 1.5em;
     color: var(--bodyTextColor);
   }
-  #services-background {
-    background-position-y: var(--bg-pos-y-img-1-mobile);
-    background-size: var(--bg-size-img-1-mobile);
-    background-repeat: no-repeat;
-    min-height: var(--min-vh-img-1-mobile);
-    max-height: var(--min-vh-img-1-mobile);
-  }
-  #services-container {
-    margin-top: var(--margin-img-1-mobile);
-  }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
@@ -143,18 +133,6 @@
   }
   #services .cs-item:nth-of-type(3) {
     order: 4;
-  }
-
-  #services-background {
-    background-position-y: var(--bg-pos-y-img-1-big);
-    background-size: var(--bg-size-img-1-big);
-    background-repeat: no-repeat;
-    min-height: var(--min-vh-img-1-big);
-    max-height: var(--min-vh-img-1-big);
-  }
-
-  #services-container {
-    margin-top: var(--margin-img-1-big);
   }
 }
 /* Desktop - 1024px */
