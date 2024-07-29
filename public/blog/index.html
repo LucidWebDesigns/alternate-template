@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/bulb.svg" />
+    <link rel="stylesheet" href="/assets/css/core.css" />
+    <script
+      defer
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navItems = document.querySelectorAll(".nav-item");
+
+        // Function to set the active item based on the current URL
+        function setActiveNavItem() {
+          const currentPath = window.location.pathname;
+
+          navItems.forEach((item) => {
+            const link = item.querySelector("a");
+            const linkPath = link.getAttribute("href");
+
+            if (
+              linkPath === currentPath ||
+              (linkPath === "/" && currentPath === "/")
+            ) {
+              item.classList.add("active");
+            } else {
+              item.classList.remove("active");
+            }
+          });
+        }
+
+        // Set the active item on initial load
+        setActiveNavItem();
+
+        // Set the active item just before the page unloads
+        window.addEventListener("beforeunload", function () {
+          navItems.forEach((item) => {
+            const link = item.querySelector("a");
+            const linkPath = link.getAttribute("href");
+
+            if (
+              linkPath === window.location.pathname ||
+              (linkPath === "/" && window.location.pathname === "/")
+            ) {
+              item.classList.add("active");
+            } else {
+              item.classList.remove("active");
+            }
+          });
+        });
+
+        // Set the active item on click without causing a blink
+        navItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            navItems.forEach((navItem) => navItem.classList.remove("active"));
+            this.classList.add("active");
+          });
+        });
+      });
+    </script>
+
+    <script>
+      // function pauseToggler(element) {
+      //   if (element.classList.contains("pointer-none")) {
+      //     element.classList.remove("pointer-none");
+      //   } else {
+      //     element.classList.add("pointer-none");
+      //   }
+      //   console.log("hi");
+      // }
+      // const elements = document.querySelectorAll("nav-toggle");
+
+      // // Loop through the NodeList and attach the event listener to each element
+      // elements.forEach((element) => {
+      //   element.addEventListener("click", () => pauseToggler(element));
+      // });
+
+      // Select all elements you want to add the event listener to
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggler = document.getElementById("toggler-btn");
+        if (toggler) {
+          toggler.addEventListener("click", function () {
+            if (!toggler.classList.contains("pointer-none")) {
+              toggler.classList.add("pointer-none");
+              setTimeout(() => {
+                toggler.classList.remove("pointer-none");
+              }, 750);
+            } else {
+            }
+          });
+
+          // if (toggler) {
+          //   toggler.addEventListener("click", function () {
+          //     if (toggler.classList.contains("empty-class")) {
+          //       toggler.classList.remove("empty-class");
+          //       toggler.classList.add("pointer-none");
+          //     } else {
+          //       toggler.classList.add("empty-class");
+          //       setTimeout(() => {
+          //         toggler.classList.remove("pointer-none");
+          //       }, 1250);
+          //     }
+          //   });
+        } else {
+          console.error("Element with id 'nav-toggle' not found.");
+        }
+      });
+
+      // Loop through the NodeList and attach the event listener to each element
+    </script>
+
+    <style>
+      .bg-curve-white {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        z-index: -1;
+      }
+
+      .bg-curve-white svg {
+        position: relative;
+        display: block;
+        width: calc(300% + 1.3px);
+        height: 600px;
+        transform: rotateY(180deg);
+        z-index: -1;
+      }
+
+      .bg-curve-white-bottom {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+      }
+
+      .bg-curve-white-bottom svg {
+        position: relative;
+        display: block;
+        width: calc(245% + 1.3px);
+        height: 600px;
+      }
+
+      .bg-curve-white .shape-fill,
+      .bg-curve-white-bottom .shape-fill {
+        fill: #ffffff;
+        z-index: -1;
+      }
+
+      .bg-curve-gradient {
+        fill: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(1, 60, 132, 1) 0%,
+          rgba(0, 149, 255, 1) 100%
+        );
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="page-header">
+  <div class="container">
+    <div class="page-header__content">
+      <a href="/">
+        <object
+          data="../assets/images/bulbtext.svg"
+          width="200"
+          height="75"
+        ></object>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" id="toggler-btn" class="nav-toggle-label">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <nav class="nav" id="nav">
+        <ul role="list" class="nav-list flex-group">
+          <li class="nav-item" data-nav="home"><a href="/">Home</a></li>
+          <li class="nav-item" data-nav="about"><a href="/about/">About</a></li>
+          <li class="nav-item" data-nav="services">
+            <a href="/services/">Services</a>
+          </li>
+          <li class="nav-item" data-nav="blog"><a href="/blog/">Blog</a></li>
+          <li class="nav-item" data-nav="contact">
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <main>
+      
+
+<link rel="stylesheet" href="/assets/css/page/blog.css" />
+<link rel="stylesheet" href="/assets/css/page/index.css" />
+
+
+<div class="fixed-bg-container">
+  <div class="bg-overlay">
+    <div class="fixed-background"></div>
+  </div>
+</div>
+<h1 class="page-header-title">Blog</h1>
+
+<section class="top-section white-bg">
+  <div class="content pt-md pb-lg">
+    <ul role="list" class="articles__list flow"><li>
+  <article class="snippet">
+    <img
+      src="https://images.unsplash.com/photo-1721901950617-76587be1155f?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      alt="living room"
+      class="snippet__image"
+    />
+    <h3 class="snippet__title">
+      <a href="/blog/2024-07-26-embracing-the-elegance-of-modern-minimalism-a-glimpse-into-serene-living-spaces/">Embracing the Elegance of Modern Minimalism: A Glimpse into Serene Living Spaces</a>
+    </h3>
+    <!-- <p class="snippet__meta">
+      by <span>Toby Van Baast</span> on
+      <span>Jul 26, 2024</span>
+    </p> -->
+    <p class="snippet__body">
+      Smartphone photography has become an integral part of our daily lives. With the advancement of camera technology in smartphones, capturing stunning photos and videos is now easier than ever. However, to truly elevate your mobile photography game, investing in the right accessories can make a significant difference. In this blog post, we’ll explore the essential accessories that can enhance your smartphone photography, as showcased in the image above.
+    </p>
+    <a href="/blog/2024-07-26-embracing-the-elegance-of-modern-minimalism-a-glimpse-into-serene-living-spaces/" class="cs-button-solid">READ MORE</a>
+  </article>
+</li>
+<li>
+  <article class="snippet">
+    <img
+      src="https://images.unsplash.com/photo-1719937051176-9b98352a6cf4?q=80&amp;w=2944&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      alt="guy with device"
+      class="snippet__image"
+    />
+    <h3 class="snippet__title">
+      <a href="/blog/2024-07-26-enhancing-your-smartphone-photography-a-closer-look-at-essential-accessories/">Enhancing Your Smartphone Photography: A Closer Look at Essential Accessories</a>
+    </h3>
+    <!-- <p class="snippet__meta">
+      by <span>toby</span> on
+      <span>Jul 26, 2024</span>
+    </p> -->
+    <p class="snippet__body">
+      Smartphone photography has become an integral part of our daily lives. With the advancement of camera technology in smartphones, capturing stunning photos and videos is now easier than ever. However, to truly elevate your mobile photography game, investing in the right accessories can make a significant difference. In this blog post, we’ll explore the essential accessories that can enhance your smartphone photography, as showcased in the image above.
+    </p>
+    <a href="/blog/2024-07-26-enhancing-your-smartphone-photography-a-closer-look-at-essential-accessories/" class="cs-button-solid">READ MORE</a>
+  </article>
+</li>
+<li>
+  <article class="snippet">
+    <img
+      src="https://miro.medium.com/v2/resize:fit:1200/1*-EpsqHbxWA2oDr-8wt5ogQ.jpeg"
+      alt="lorem ipsum post"
+      class="snippet__image"
+    />
+    <h3 class="snippet__title">
+      <a href="/blog/2024-07-26-this-is-a-test/">This is a test. I&#39;m making the title longer, so the height matches up</a>
+    </h3>
+    <!-- <p class="snippet__meta">
+      by <span>https://www.lipsum.com/</span> on
+      <span>Jul 26, 2024</span>
+    </p> -->
+    <p class="snippet__body">
+      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of &quot;de Finibus Bonorum et Malorum&quot; (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, &quot;Lorem ipsum dolor sit amet..&quot;, comes from a line in section 1.10.32.
+    </p>
+    <a href="/blog/2024-07-26-this-is-a-test/" class="cs-button-solid">READ MORE</a>
+  </article>
+</li>
+
+    </ul>
+  </div>
+</section>
+
+    </main>
+    <footer class="site-footer pt-sm">
+  <div class="upper-footer">
+    <div>
+      <div class="footer-logo">
+        <object
+          data="../assets/images/bulbtext.svg"
+          width="200"
+          height="75"
+        ></object>
+      </div>
+      <ul>
+        <li>toby.webhelp@gmail.com</li>
+        <li>512-645-9719</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Navigation</h3>
+      <hr class="footer-nav-underline" />
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Blog</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+  </div>
+  <hr class="footer-divider" />
+  <div class="copyright-container">
+    <object
+      data="../assets/images/bulbtext.svg"
+      width="200"
+      height="40"
+    ></object>
+    <p>
+      Copyright ©
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+      . Lucid Web Designs . All rights reserved.
+    </p>
+  </div>
+</footer>
+
+
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

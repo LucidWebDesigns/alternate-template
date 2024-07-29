@@ -803,7 +803,7 @@ font sizes, styles
     z-index: 50;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     top: 0;
     width: 100%;
     background-image: var(--url-img-1);
