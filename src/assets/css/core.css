@@ -803,14 +803,14 @@ font sizes, styles
     z-index: 50;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    /* background-size: contain; */
+    background-size: contain;
     top: 0;
     width: 100vw;
     background-image: var(--url-img-1);
-    /* background-position-y: var(--bg-pos-y-img-1-mobile);
-    background-size: var(--bg-size-img-1-mobile);
+    background-position-y: var(--bg-pos-y-img-1-mobile);
+    /* background-size: var(--bg-size-img-1-mobile); */
     min-height: var(--min-vh-img-1-mobile);
-    max-height: var(--min-vh-img-1-mobile); */
+    max-height: var(--min-vh-img-1-mobile);
   }
   .fixed-background {
     opacity: var(--img-1-opc);
@@ -827,10 +827,10 @@ font sizes, styles
 @media only screen and (min-width: 48rem) {
   .bg-overlay {
     position: fixed;
-    /* background-position-y: var(--bg-pos-y-img-1-big);
-    background-size: var(--bg-size-img-1-big); */
+    background-position-y: var(--bg-pos-y-img-1-big);
+    /* background-size: var(--bg-size-img-1-big); */
     background-repeat: no-repeat;
-    /* min-height: var(--min-vh-img-1-big);
-    max-height: var(--min-vh-img-1-big); */
+    min-height: var(--min-vh-img-1-big);
+    max-height: var(--min-vh-img-1-big);
   }
 }
