@@ -524,5 +524,35 @@
         });
       }
     </script>
+
+    <!-- START EMAIL JS -->
+    <script
+      src="https://cdn.emailjs.com/dist/email.min.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("YOUR_USER_ID"); // Replace 'YOUR_USER_ID' with your actual user ID from EmailJS
+      })();
+    </script>
+    <!-- HANDLER -->
+    <script type="text/javascript">
+      function sendEmail(event) {
+        event.preventDefault();
+
+        emailjs
+          .sendForm("service_g2va7ar", "template_u4y9pib", "#cs-form-1750")
+          .then(
+            function (response) {
+              alert("Message sent successfully!");
+              document.getElementById("cs-form-1750").reset();
+            },
+            function (error) {
+              alert("Failed to send the message. Please try again.");
+            }
+          );
+      }
+    </script>
+    <!-- END EMAIL JS -->
   </body>
 </html>

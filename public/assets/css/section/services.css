@@ -91,7 +91,7 @@
     font-size: 1.25rem;
     line-height: 1.2em;
     margin: 0 0 1.25rem 0;
-    color: var(--headerColor);
+    color: var(-- --placeholderColor);
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -100,7 +100,6 @@
     width: 2.25rem;
     height: 2.25rem;
     border-radius: 50%;
-    background-color: var(--primaryLight);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,7 +125,6 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #services .cs-container {
-    max-width: 80rem;
   }
   #services .cs-item {
     grid-column: span 6;
@@ -138,13 +136,14 @@
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
   #services .cs-container {
+    max-width: 80rem;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 2.5rem;
   }
   #services .cs-content {
-    width: 42%;
+    width: 50%;
     max-width: 32.625rem;
   }
   #services .cs-wrapper {

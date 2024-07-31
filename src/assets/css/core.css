@@ -14,16 +14,13 @@
   --bg-color: rgb(15, 88, 133);
   --item-box-shadow: -1px -5px 15px rgba(66, 183, 255, 0.35),
     1px -5px 15px rgba(66, 183, 255, 0.35);
+  --primary: rgb(66, 183, 255);
+  --placeholderColor: #1a1a1a;
+  --bodyTextColor: #686868;
 
   /*################################# code stitch #################################*/
   /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-  /* --primary: #ff6a3e; */
-  --primary: rgb(66, 183, 255);
-  --primaryLight: #ffba43;
-  --secondary: #ffba43;
-  --secondaryLight: #ffba43;
-  --headerColor: #1a1a1a;
-  --bodyTextColor: #686868;
+
   --bodyTextColorWhite: #fafbfc;
   /* 13px - 16px */
   --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -801,7 +798,6 @@ font sizes, styles
   .bg-overlay {
     position: fixed;
     z-index: 50;
-    /* background-attachment: fixed; */
     background-repeat: no-repeat;
     background-size: contain;
     top: 0;
@@ -838,4 +834,9 @@ font sizes, styles
     min-height: var(--min-vh-img-1-big);
     max-height: var(--min-vh-img-1-big);
   }
+}
+
+button:hover,
+a:hover {
+  cursor: pointer;
 }
