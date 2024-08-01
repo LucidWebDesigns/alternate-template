@@ -9,13 +9,9 @@
     flex-direction: column;
     gap: 1em;
   }
-  .cs-item {
-    margin: 0;
-  }
+
   #pricing {
-    /* padding: var(--sectionPadding); */
     padding-bottom: 10vw;
-    /* background-color: #f7f7f7; */
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -30,12 +26,10 @@
     position: relative;
   }
   #pricing .cs-content {
-    /* set text align to center if content needs to be center aligned */
     text-align: left;
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* centers content horizontally, set to flex-start to left align */
     align-items: flex-start;
     position: relative;
   }
@@ -79,61 +73,34 @@
     align-items: center;
   }
   #pricing .cs-item {
-    text-align: center;
-    list-style: none;
     width: 100%;
-    margin: 0;
-    /* 32px - 40px top *
-            /* 16px - 32px left & right */
     padding: clamp(2rem, 2vw, 2.5rem) clamp(1rem, 1.5vw, 2rem);
     background-color: #ffffff;
-    /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    position: relative;
     border: 2px solid rgba(222, 242, 255, 0.75);
     border-radius: 5px;
+    max-width: 300px;
+    margin: 1.5rem 0;
   }
   #pricing .cs-item.cs-popular {
-    background-color: #fff;
-    /* 48px - 64px top & bottom */
-    /* 16px - 32px left & right */
-    padding: clamp(3rem, 6vw, 4rem) clamp(1rem, 1.5vw, 2rem);
     box-shadow: var(--item-box-shadow);
-
-    margin: 0 25px;
     z-index: 1;
+    font-size: 1.1em;
   }
   .cs-price,
   .cs-frequency {
     color: var(--primary);
     font-size: 5em;
   }
-  #pricing .cs-item.cs-popular .cs-package,
-  #pricing .cs-item.cs-popular .cs-frequency,
-  #pricing .cs-item.cs-popular .cs-item-text {
-    opacity: 0.9;
-  }
-  #pricing .cs-item .cs-price {
-    color: var(--primary);
-  }
+  #pricing .cs-item .cs-price,
   #pricing .cs-item .cs-frequency {
     color: var(--primary);
   }
-  #pricing .cs-item.cs-popular .cs-button-solid {
-    transition: color 0.3s;
-  }
-  #pricing .cs-item.cs-popular .cs-button-solid:hover {
-    color: var(--primary);
-  }
-  #pricing .cs-item.cs-popular .cs-button-solid:before {
-    background-color: #fff;
-  }
   #pricing .cs-package {
-    /* 13px - 16px */
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.2em;
@@ -145,8 +112,8 @@
   }
   #pricing .cs-flex-wrapper {
     width: 100%;
-    margin: 0 0 1.5rem 0;
-    padding: 0 0 1.5rem;
+    margin: 0 0 1rem 0;
+    padding: 0 0 1rem;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -155,24 +122,8 @@
     position: relative;
     z-index: 1;
   }
-  #pricing .cs-flex-wrapper:after {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      rgba(232, 232, 232, 0.2) 0%,
-      #e8e8e8 53.78%,
-      rgba(232, 232, 232, 0.2) 100%
-    );
-    opacity: 1;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: block;
-  }
+
   #pricing .cs-price {
-    /* font-size: var(--headerFontSize); */
     font-size: 3em;
     font-weight: 400;
     line-height: 1.2em;
@@ -203,39 +154,7 @@
     color: black;
   }
   #pricing .cs-button-solid {
-    font-size: 1rem;
-    font-weight: 700;
-    /* 46px - 56px */
-    line-height: clamp(2.875em, 5.5vw, 3.5em);
-    text-align: center;
-    text-decoration: none;
-    min-width: 9.375rem;
     margin: 2rem 0 0 0;
-    /* prevents padding from adding to the width */
-    box-sizing: border-box;
-    padding: 0 1.5rem;
-    color: #fff;
-    background-color: var(--primary);
-    border-radius: 0.25rem;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-  }
-  #pricing .cs-button-solid:before {
-    content: "";
-    width: 0%;
-    height: 100%;
-    background: #000;
-    opacity: 1;
-    border-radius: 0.25rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: width 0.3s;
-  }
-  #pricing .cs-button-solid:hover:before {
-    width: 100%;
   }
   #pricing .cs-graphic {
     width: 100%;
@@ -271,10 +190,7 @@
     flex-direction: row;
     align-items: stretch;
   }
-  #pricing .cs-item {
-    height: auto;
-    margin: 1.5rem 0;
-  }
+
   #pricing .cs-item.cs-popular {
     margin: 0;
   }
