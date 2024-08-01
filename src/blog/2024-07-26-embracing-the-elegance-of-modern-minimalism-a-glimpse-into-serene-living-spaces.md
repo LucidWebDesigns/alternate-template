@@ -13,11 +13,7 @@ tags:
 image: https://images.unsplash.com/photo-1541701080588-8f9c226c413a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 imageAlt: stop watch pool
 ---
-
-
-![stop watch at pool](https://images.unsplash.com/photo-1541701080588-8f9c226c413a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
-
-
+![stop watch at pool]()
 
 In today's fast-paced digital world, users expect websites to load in the blink of an eye. If your site is slow, you risk losing potential customers before they even see what you have to offer. Here’s why a fast-loading website is crucial for your business and how you can ensure your site meets the mark.
 
