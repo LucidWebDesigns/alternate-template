@@ -11,7 +11,7 @@ module.exports = function (eleventyConfig) {
   return {
     dir: {
       input: "src",
-      output: "dist",
+      output: "public",
       includes: "_includes"
     },
     markdownTemplateEngine: "njk", // Use Nunjucks for Markdown files

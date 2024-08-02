@@ -1,0 +1,59 @@
+/*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #hero .cs-title {
+    width: 100%;
+  }
+
+  #hero .cs-card-group {
+    margin: 2em 0 5em 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    /* grid-template-columns: repeat(12, 1fr); */
+    /* 16px - 20px */
+    gap: clamp(2rem, 4.6vw, 2.5rem);
+    text-align: center;
+    flex-direction: column;
+  }
+  #hero .cs-item {
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    box-sizing: border-box;
+    grid-column: span 12;
+    grid-row: span 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    align-self: flex-start;
+  }
+  #hero .cs-icon {
+    width: 4.5rem;
+    height: auto;
+    margin: 0 0 1.5rem 0;
+    color: #fff;
+  }
+  #hero .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: bold;
+    /* text-align: inherit; */
+    margin: 0 0 1rem 0;
+    color: black;
+  }
+}
+
+@media only screen and (min-width: 73.5rem) {
+  #hero .cs-card-group {
+    flex-direction: row;
+    margin: 2em 0 4em 0;
+  }
+}

@@ -1,0 +1,135 @@
+.btn {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1;
+  padding: 0.75em 1.75em;
+  border-radius: 0.25em;
+  align-self: start;
+  justify-self: start;
+}
+
+.btn:focus {
+  outline: 0.125em solid var(--clr-primary-400);
+  outline-offset: 0.25em;
+}
+
+.btn--primary {
+  background: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-700);
+  border: 2px solid var(--clr-primary-400);
+}
+.btn--primary:hover,
+.btn--primary:focus {
+  background: var(--clr-primary-500);
+  border-color: var(--clr-primary-500);
+}
+
+.btn--neutral {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-neutral-900);
+  font-weight: var(--fw-700);
+  border: 2px solid var(--clr-neutral-900);
+}
+
+.btn--neutral:hover,
+.btn--neutral:focus {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+}
+
+@media (max-width: 1068px) {
+  .articles__list {
+    flex-direction: column;
+  }
+}
+@media (min-width: 1069px) {
+  .articles__list {
+    flex-direction: row;
+  }
+}
+.articles__list {
+  display: flex;
+  --flow-spacer: 3rem;
+  gap: 2em;
+  /* margin: 1rem; */
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* //////////////////////
+  Individual article page
+  /////////////////////// */
+
+/* .main-article {
+  margin-bottom: 3rem;
+}
+
+.main-article__figure figcaption {
+  margin: 1rem 0;
+  font-size: var(--fs-300);
+  opacity: 0.9;
+} */
+
+/* //////////////////////
+  Article snippets
+  /////////////////////// */
+
+.snippet {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  box-shadow: var(--item-box-shadow);
+  padding: 3em 2em;
+  border-radius: 5px;
+  max-width: clamp(10rem, 300px, 30rem);
+}
+
+.snippet__body {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.snippet__image {
+  width: 100%;
+  max-height: clamp(10rem, 10vh, 20rem);
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.snippet__meta {
+  color: var(--clr-neutral-300);
+}
+
+.snippet__meta span {
+  color: var(--clr-neutral-900);
+}
+
+.snippet__title {
+  color: black;
+  font-size: 1.25rem;
+}
+
+.snippet__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.snippet__title a:hover,
+.snippet__title a:focus {
+  color: var(--primary);
+}
+
+.snippet .cs-button-solid {
+  margin-left: 0;
+  font-size: 0.8rem;
+}
+/* typgraphy */
+.article-title {
+  font-size: var(--fs-700);
+}
