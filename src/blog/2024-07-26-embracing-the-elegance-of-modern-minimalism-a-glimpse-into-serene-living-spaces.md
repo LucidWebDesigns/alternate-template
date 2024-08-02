@@ -15,7 +15,7 @@ imageAlt: stop watch pool
 ---
 ![stop watch at pool]()
 
-In today's fast-paced digital world, users expect websites to load in the blink of an eye. If your site is slow, you risk losing potential customers before they even see what you have to offer. Here’s why a fast-loading website is crucial for your business and how you can ensure your site meets the mark.
+In today's fast-paced digital world, users expect websites to load in the blink of an eye. If your site is slow, you risk losing potential customers before they even see what you have to offer. Here’s why a fast-loading website is crucial for your business and how you can ensure your site meets the mark..
 
 ## The Impact of Speed on User Experience
 
