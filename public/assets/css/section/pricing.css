@@ -1,0 +1,214 @@
+/*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+/* test */
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  .cs-price-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  #pricing {
+    padding-bottom: 10vw;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  #pricing .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  #pricing .cs-content {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+  #pricing .cs-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  #pricing .cs-title {
+    margin: 0;
+  }
+  #pricing .cs-wrapper {
+    width: 100%;
+    max-width: 80rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #pricing .cs-ul {
+    width: 100%;
+    margin: 1.5rem 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  #pricing .cs-icon {
+    width: 1.125rem;
+    height: auto;
+    display: block;
+  }
+  #pricing .cs-card-group {
+    gap: 2em;
+    width: 100%;
+    max-width: 57rem;
+    margin: 3rem 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #pricing .cs-item {
+    width: 100%;
+    padding: clamp(2rem, 2vw, 2.5rem) clamp(1rem, 1.5vw, 2rem);
+    background-color: #ffffff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid rgba(222, 242, 255, 0.75);
+    border-radius: 5px;
+    max-width: 300px;
+    margin: 1.5rem 0;
+  }
+  #pricing .cs-item.cs-popular {
+    box-shadow: var(--item-box-shadow);
+    z-index: 1;
+    font-size: 1.1em;
+  }
+  .cs-price,
+  .cs-frequency {
+    color: var(--primary);
+    font-size: 5em;
+  }
+  #pricing .cs-item .cs-price,
+  #pricing .cs-item .cs-frequency {
+    color: var(--primary);
+  }
+  #pricing .cs-package {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2em;
+    text-align: inherit;
+    text-transform: uppercase;
+    margin: 0 0 0.25rem 0;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #pricing .cs-flex-wrapper {
+    width: 100%;
+    margin: 0 0 1rem 0;
+    padding: 0 0 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  #pricing .cs-price {
+    font-size: 3em;
+    font-weight: 400;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 0;
+    color: var(--placeholderColor);
+  }
+  #pricing .cs-frequency {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: inherit;
+    margin: 0;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #pricing .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: inherit;
+    margin: 0 0 auto;
+    color: var(--bodyTextColor);
+  }
+  .cs-item-text-popular {
+    font-size: 1.25;
+    color: var(--bodyTextColor);
+  }
+  .cs-item-header {
+    color: black;
+  }
+  #pricing .cs-button-solid {
+    margin: 2rem 0 0 0;
+  }
+  #pricing .cs-graphic {
+    width: 100%;
+    min-width: 120rem;
+    height: auto;
+    position: absolute;
+    bottom: -1rem;
+    left: 0rem;
+    z-index: -1;
+  }
+  #pricing .cs-dark {
+    display: none;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #pricing .cs-container {
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #pricing .cs-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  #pricing .cs-ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+  }
+  #pricing .cs-card-group {
+    gap: 0;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  #pricing .cs-item.cs-popular {
+    margin: 0;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #pricing .cs-ul {
+    width: 30%;
+    display: flex;
+  }
+  #pricing .cs-wrapper {
+    flex-direction: row;
+    gap: 1.25rem;
+  }
+  #pricing .cs-card-group {
+    margin: 0;
+  }
+  #pricing .cs-item {
+    min-height: 25rem;
+  }
+}
