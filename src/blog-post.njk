@@ -1,0 +1,40 @@
+---
+title: Lucid Web Designs
+layout: "base.njk"
+---
+
+
+
+{% for item in collections.post %}
+  {% if item.author == "url" %}
+    {% set urlPost = item %}
+  {% endif %}
+  {% if item.title == urlPost.title %}
+    {% set post = item %}
+  {% endif %}
+{% endfor %}
+
+{% if post %}
+<section>
+  <h1>{{ post.data.title }}</h1>
+  <p>{{ post.date | date('MMMM D, YYYY') }}</p>
+  <div>
+    {{ post.content | safe }}
+  </div>
+</section>
+{% else %}
+<section>
+  <p>Post not found.</p>
+</section>
+{% endif %} 
+<!-- <ul>
+{% for item in collections.post %}
+{% if item.url == query.id %}
+  <li>{{ item.url }} - {{ item.data.title }}</li>
+{% endif %}
+{% endfor %}
+</ul> -->
+<!-- <p>Query ID: {{ query.id }}</p> -->
+ <!-- <section id="post-content">
+  <p id="post-id">Post content will be loaded here.</p>
+</section> -->

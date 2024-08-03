@@ -846,3 +846,10 @@ a:hover {
   border-radius: 100%;
   margin: auto;
 }
+iframe {
+  min-height: 100vh;
+  min-width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

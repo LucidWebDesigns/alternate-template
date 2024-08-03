@@ -11,6 +11,10 @@
       src="https://identity.netlify.com/v1/netlify-identity-widget.js"
     ></script>
     <script>
+    
+    // if(localStorage.getItem("page") != null){
+    //   // window.location.href = '/blog-post/';
+    // }
       document.addEventListener("DOMContentLoaded", function () {
         const navItems = document.querySelectorAll(".nav-item");
 
@@ -128,6 +132,7 @@
     </script>
     <!-- END EMAIL JS -->
 
+
     <style>
       .bg-curve-white {
         position: absolute;
@@ -231,7 +236,73 @@
 
 <section class="top-section white-bg">
   <div class="content pt-md pb-lg">
-    <ul role="list" class="articles__list flow"><li>
+    <ul role="list" class="articles__list flow">
+
+
+<li>
+  <article class="snippet">
+    <img
+      src="url"
+      alt="url"
+      class="snippet__image"
+    />
+    <h3 class="snippet__title">
+      <a href="/blog/url/">Why a Fast-Loading Website Is Crucial for Your Business</a>
+    </h3>
+    <p class="snippet__body">
+      url
+    </p>
+    <a href="/blog-post/" class="cs-button-solid" onclick="updateTitle('Why a Fast-Loading Website Is Crucial for Your Business', event)">READ MORE</a>
+  </article>
+  <p></p>
+</li>
+
+<script>
+  function updateTitle(title, event) {
+    // if(localStorage.getItem("page") == null){
+    //   locatStorage.set("page", "not null")
+    // } else {
+    //   locatStorage.set("page", "not null")
+    // }
+    event.preventDefault(); // Prevent the default link behavior
+
+    // fetch('http://localhost:3000/test-route', {
+    // method: 'POST'
+    // })
+    // .then(response => response.text())
+    // .then(data => console.log(data))
+    // .catch(error => console.error('Error:', error));
+    
+    fetch('http://localhost:3000/update-md', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ title: title })
+})
+.then(()=> {
+  window.location.href = '/blog-post/';
+})
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+        // Optionally, redirect after the update is complete
+        window.location.href = '/blog-post/';
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+  }
+
+
+  //  .then(()=> {
+  //     window.location.href = '/blog-post/';
+  //   })
+</script>
+
+
+
+<li>
   <article class="snippet">
     <img
       src="kajlsdjfjklasdhfjklsa"
@@ -241,16 +312,59 @@
     <h3 class="snippet__title">
       <a href="/blog/2024-08-02-aslkdfjalksdjf/">aslkdfjalksdjf</a>
     </h3>
-    <!-- <p class="snippet__meta">
-      by <span>aksdljflkasjfdlkajslkdf</span> on
-      <span>Aug 2, 2024</span>
-    </p> -->
     <p class="snippet__body">
       asdklfalksdjfkl
     </p>
-    <a href="/blog/2024-08-02-aslkdfjalksdjf/" class="cs-button-solid">READ MORE</a>
+    <a href="/blog-post/" class="cs-button-solid" onclick="updateTitle('aslkdfjalksdjf', event)">READ MORE</a>
   </article>
+  <p></p>
 </li>
+
+<script>
+  function updateTitle(title, event) {
+    // if(localStorage.getItem("page") == null){
+    //   locatStorage.set("page", "not null")
+    // } else {
+    //   locatStorage.set("page", "not null")
+    // }
+    event.preventDefault(); // Prevent the default link behavior
+
+    // fetch('http://localhost:3000/test-route', {
+    // method: 'POST'
+    // })
+    // .then(response => response.text())
+    // .then(data => console.log(data))
+    // .catch(error => console.error('Error:', error));
+    
+    fetch('http://localhost:3000/update-md', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ title: title })
+})
+.then(()=> {
+  window.location.href = '/blog-post/';
+})
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+        // Optionally, redirect after the update is complete
+        window.location.href = '/blog-post/';
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+  }
+
+
+  //  .then(()=> {
+  //     window.location.href = '/blog-post/';
+  //   })
+</script>
+
+
+
 <li>
   <article class="snippet">
     <img
@@ -261,16 +375,59 @@
     <h3 class="snippet__title">
       <a href="/blog/2024-07-26-embracing-the-elegance-of-modern-minimalism-a-glimpse-into-serene-living-spaces/">Why a Fast-Loading Website Is Crucial for Your Business</a>
     </h3>
-    <!-- <p class="snippet__meta">
-      by <span>Toby Van Baast</span> on
-      <span>Jul 26, 2024</span>
-    </p> -->
     <p class="snippet__body">
       In today&#39;s fast-paced digital world, users expect websites to load in the blink of an eye. If your site is slow, you risk losing potential customers before they even see what you have to offer. Here’s why a fast-loading website is crucial for your business and how you can ensure your site meets the mark.
     </p>
-    <a href="/blog/2024-07-26-embracing-the-elegance-of-modern-minimalism-a-glimpse-into-serene-living-spaces/" class="cs-button-solid">READ MORE</a>
+    <a href="/blog-post/" class="cs-button-solid" onclick="updateTitle('Why a Fast-Loading Website Is Crucial for Your Business', event)">READ MORE</a>
   </article>
+  <p></p>
 </li>
+
+<script>
+  function updateTitle(title, event) {
+    // if(localStorage.getItem("page") == null){
+    //   locatStorage.set("page", "not null")
+    // } else {
+    //   locatStorage.set("page", "not null")
+    // }
+    event.preventDefault(); // Prevent the default link behavior
+
+    // fetch('http://localhost:3000/test-route', {
+    // method: 'POST'
+    // })
+    // .then(response => response.text())
+    // .then(data => console.log(data))
+    // .catch(error => console.error('Error:', error));
+    
+    fetch('http://localhost:3000/update-md', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ title: title })
+})
+.then(()=> {
+  window.location.href = '/blog-post/';
+})
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+        // Optionally, redirect after the update is complete
+        window.location.href = '/blog-post/';
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+  }
+
+
+  //  .then(()=> {
+  //     window.location.href = '/blog-post/';
+  //   })
+</script>
+
+
+
 <li>
   <article class="snippet">
     <img
@@ -281,16 +438,59 @@
     <h3 class="snippet__title">
       <a href="/blog/2024-07-26-enhancing-your-smartphone-photography-a-closer-look-at-essential-accessories/">Enhancing Your Smartphone Photography: A Closer Look at Essential Accessories</a>
     </h3>
-    <!-- <p class="snippet__meta">
-      by <span>toby</span> on
-      <span>Jul 26, 2024</span>
-    </p> -->
     <p class="snippet__body">
       Smartphone photography has become an integral part of our daily lives. With the advancement of camera technology in smartphones, capturing stunning photos and videos is now easier than ever. However, to truly elevate your mobile photography game, investing in the right accessories can make a significant difference. In this blog post, we’ll explore the essential accessories that can enhance your smartphone photography, as showcased in the image above.
     </p>
-    <a href="/blog/2024-07-26-enhancing-your-smartphone-photography-a-closer-look-at-essential-accessories/" class="cs-button-solid">READ MORE</a>
+    <a href="/blog-post/" class="cs-button-solid" onclick="updateTitle('Enhancing Your Smartphone Photography: A Closer Look at Essential Accessories', event)">READ MORE</a>
   </article>
+  <p></p>
 </li>
+
+<script>
+  function updateTitle(title, event) {
+    // if(localStorage.getItem("page") == null){
+    //   locatStorage.set("page", "not null")
+    // } else {
+    //   locatStorage.set("page", "not null")
+    // }
+    event.preventDefault(); // Prevent the default link behavior
+
+    // fetch('http://localhost:3000/test-route', {
+    // method: 'POST'
+    // })
+    // .then(response => response.text())
+    // .then(data => console.log(data))
+    // .catch(error => console.error('Error:', error));
+    
+    fetch('http://localhost:3000/update-md', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ title: title })
+})
+.then(()=> {
+  window.location.href = '/blog-post/';
+})
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+        // Optionally, redirect after the update is complete
+        window.location.href = '/blog-post/';
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+  }
+
+
+  //  .then(()=> {
+  //     window.location.href = '/blog-post/';
+  //   })
+</script>
+
+
+
 <li>
   <article class="snippet">
     <img
@@ -301,16 +501,56 @@
     <h3 class="snippet__title">
       <a href="/blog/2024-07-26-this-is-a-test/">This is a test. I&#39;m making the title longer, so the height matches up</a>
     </h3>
-    <!-- <p class="snippet__meta">
-      by <span>https://www.lipsum.com/</span> on
-      <span>Jul 26, 2024</span>
-    </p> -->
     <p class="snippet__body">
-      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of &quot;de Finibus Bonorum et Malorum&quot; (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, &quot;Lorem ipsum dolor sit amet..&quot;, comes from a line in section 1.10.32.
+      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of &quot;de Finibus Bonorum et Malorum&quot; (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, &quot;Lorem ipsum dolor sit amet..&quot;, comes from a line
     </p>
-    <a href="/blog/2024-07-26-this-is-a-test/" class="cs-button-solid">READ MORE</a>
+    <a href="/blog-post/" class="cs-button-solid" onclick="updateTitle('This is a test. I&#39;m making the title longer, so the height matches up', event)">READ MORE</a>
   </article>
+  <p></p>
 </li>
+
+<script>
+  function updateTitle(title, event) {
+    // if(localStorage.getItem("page") == null){
+    //   locatStorage.set("page", "not null")
+    // } else {
+    //   locatStorage.set("page", "not null")
+    // }
+    event.preventDefault(); // Prevent the default link behavior
+
+    // fetch('http://localhost:3000/test-route', {
+    // method: 'POST'
+    // })
+    // .then(response => response.text())
+    // .then(data => console.log(data))
+    // .catch(error => console.error('Error:', error));
+    
+    fetch('http://localhost:3000/update-md', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ title: title })
+})
+.then(()=> {
+  window.location.href = '/blog-post/';
+})
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+        // Optionally, redirect after the update is complete
+        window.location.href = '/blog-post/';
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+  }
+
+
+  //  .then(()=> {
+  //     window.location.href = '/blog-post/';
+  //   })
+</script>
 
     </ul>
   </div>

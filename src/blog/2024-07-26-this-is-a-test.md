@@ -10,13 +10,10 @@ description: Contrary to popular belief, Lorem Ipsum is not simply random text.
   (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a
   treatise on the theory of ethics, very popular during the Renaissance. The
   first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line
-  in section 1.10.32.
-author: https://www.lipsum.com/
+author: lipsum
 date: 2024-07-26T11:08:00.000Z
 tags:
   - post
-  - lorem
-  - ipsum
   - featured
 image: https://miro.medium.com/v2/resize:fit:1200/1*-EpsqHbxWA2oDr-8wt5ogQ.jpeg
 imageAlt: lorem ipsum post
