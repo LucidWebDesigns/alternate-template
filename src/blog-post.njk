@@ -3,16 +3,12 @@ title: Lucid Web Designs
 layout: "base.njk"
 ---
 
-
-
-{% for item in collections.post %}
-  {% if item.author == "url" %}
-    {% set urlPost = item %}
-  {% endif %}
-  {% if item.title == urlPost.title %}
-    {% set post = item %}
-  {% endif %}
-{% endfor %}
+{%- set post = null -%}
+{%- for item in collections.post -%}
+  {%- if item.data.author == url and post == null -%}
+    {%- set post = item -%}
+  {%- endif -%}
+{%- endfor -%}
 
 {% if post %}
 <section>
@@ -26,15 +22,4 @@ layout: "base.njk"
 <section>
   <p>Post not found.</p>
 </section>
-{% endif %} 
-<!-- <ul>
-{% for item in collections.post %}
-{% if item.url == query.id %}
-  <li>{{ item.url }} - {{ item.data.title }}</li>
 {% endif %}
-{% endfor %}
-</ul> -->
-<!-- <p>Query ID: {{ query.id }}</p> -->
- <!-- <section id="post-content">
-  <p id="post-id">Post content will be loaded here.</p>
-</section> -->
