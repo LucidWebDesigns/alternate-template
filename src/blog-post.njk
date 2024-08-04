@@ -2,24 +2,29 @@
 title: Lucid Web Designs
 layout: "base.njk"
 ---
+<style>
+  .bigDiv {
+    padding-top: 150px;
+  }
+</style>
 
-{%- set post = null -%}
-{%- for item in collections.post -%}
-  {%- if item.data.author == url and post == null -%}
-    {%- set post = item -%}
-  {%- endif -%}
-{%- endfor -%}
+<section class="bigDiv top-section-jumboless gradient">
+  <div class="content hero pt-sm">
+    <div class="container flow pt-md">
 
-{% if post %}
-<section>
-  <h1>{{ post.data.title }}</h1>
-  <p>{{ post.date | date('MMMM D, YYYY') }}</p>
-  <div>
-    {{ post.content | safe }}
+      {%- set post = null -%}
+      {%- for item in collections.post -%}
+        <!-- Debugging output -->
+        <p>Author: {{ item.data.author }}</p>
+        <p>URL: {{ item.url }}</p>
+        <p>Condition: {{ item.url == "/blog/url/" }}</p>
+
+        {%- if item.url == "/blog/url/" -%}
+        <p>{{ item.data.title }}</p>
+          <!-- {%- set post = item -%} -->
+        {%- endif -%}
+      {%- endfor -%}
+
+    </div>
   </div>
 </section>
-{% else %}
-<section>
-  <p>Post not found.</p>
-</section>
-{% endif %}
